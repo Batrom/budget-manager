@@ -45,7 +45,7 @@ CREATE TABLE debt
   debtor_id int NOT NULL,
   product_id int NOT NULL,
   amount decimal(10,2) NOT NULL,
-  cretiondate date NOT NULL,
+  creation_date date NOT NULL,
   PRIMARY KEY(id)
   ,
   CONSTRAINT fk_debt_product1 FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -57,6 +57,10 @@ CREATE INDEX fk_debt_product1 ON debt (product_id);
 CREATE INDEX fk_debt_user1 ON debt (creditor_id);
 CREATE INDEX fk_debt_user2 ON debt (debtor_id);*/
 
+/*
 INSERT INTO users (id, name) VALUES (1, 'Bartek'), (2, 'Aga'), (3, 'Rafał');
 INSERT INTO user_group (id, name) VALUES (1, 'Wszyscy'), (2, 'Rafał i Aga'), (3, 'Bartek');
 INSERT INTO user_user_group (user_id, user_group_id) VALUES (1, 1), (1, 3), (2, 1), (2, 2), (3, 1), (3, 2);
+*/
+
+ALTER TABLE debt RENAME cretiondate TO creation_date;
