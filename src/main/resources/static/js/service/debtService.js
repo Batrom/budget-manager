@@ -37,5 +37,6 @@ angular.module('ngBudgetCalc')
                 debt.creationDate = months[debtArray[0] - 1] + ' ' + debtArray[1];
                 return debt;
             });
+            console.log(debts);
         };
     });

@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .service('productService', function (productFactory, $rootScope) {
+    .service('productService', function (productFactory, $rootScope, debtService) {
         let products = [];
         let userProducts = [];
         let todaysUserProducts = [];
@@ -23,6 +23,7 @@ angular.module('ngBudgetCalc')
                 .then(
                     function (response) {
                         fetchLoadProductsResponse(response);
+                        debtService.loadDebts($rootScope.loggedUser);
                     },
                     function (error) {
                         console.error(error);
@@ -33,7 +34,8 @@ angular.module('ngBudgetCalc')
             productFactory.saveProduct(product)
                 .then(
                     function (response) {
-                        fetchSaveProductResponse(response)
+                        fetchSaveProductResponse(response);
+                        debtService.loadDebts($rootScope.loggedUser);
                     },
                     function (error) {
                         console.error(error);
@@ -44,7 +46,8 @@ angular.module('ngBudgetCalc')
             productFactory.editProduct(product)
                 .then(
                     function (response) {
-                        fetchEditProductResponse(response)
+                        fetchEditProductResponse(response);
+                        debtService.loadDebts($rootScope.loggedUser);
                     },
                     function (error) {
                         console.error(error);
@@ -55,7 +58,9 @@ angular.module('ngBudgetCalc')
             productFactory.deleteProduct(product)
                 .then(
                     function () {
-                        fetchDeleteProductResponse(product)
+                        fetchDeleteProductResponse(product);
+                        debtService.loadDebts($rootScope.loggedUser);
+
                     },
                     function (error) {
                         console.error(error);

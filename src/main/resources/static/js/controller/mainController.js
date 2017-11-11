@@ -37,14 +37,11 @@ angular.module('ngBudgetCalc')
                 "creditor": $rootScope.loggedUser
             };
             document.getElementById('productDescription').focus();
-
-            debtService.loadDebts($rootScope.loggedUser);
         };
 
 
         $scope.delete = function (product) {
             productService.deleteProduct(product);
-            debtService.loadDebts($rootScope.loggedUser);
         };
 
         $scope.openEditModal = function (product) {
@@ -74,7 +71,6 @@ angular.module('ngBudgetCalc')
                 "creditor": $rootScope.loggedUser
             };
             productService.loadProducts();
-            debtService.loadDebts($rootScope.loggedUser);
         };
     });
 

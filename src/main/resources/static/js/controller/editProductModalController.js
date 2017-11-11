@@ -4,7 +4,6 @@ angular.module('ngBudgetCalc')
 
         $scope.saveChanges = function () {
             productService.editProduct($scope.product);
-            debtService.loadDebts($rootScope.loggedUser);
             $uibModalInstance.close();
         };
 
