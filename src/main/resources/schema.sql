@@ -1,4 +1,4 @@
-CREATE TABLE user (
+CREATE TABLE users (
   id serial NOT NULL,
   name varchar(45) NOT NULL,
   PRIMARY KEY(id)
@@ -15,7 +15,7 @@ CREATE TABLE user_user_group (
   user_group_id int NOT NULL,
   PRIMARY KEY (user_id, user_group_id)
   ,
-  CONSTRAINT fk_UserGroup_has_User_User1 FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_UserGroup_has_User_User1 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT fk_UserGroup_has_User_UserGroup1 FOREIGN KEY (user_group_id) REFERENCES user_group (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE product (
   creation_date date NOT NULL,
   PRIMARY KEY(id)
   ,
-  CONSTRAINT fk_product_user1 FOREIGN KEY (creditor_id) REFERENCES user (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_product_user1 FOREIGN KEY (creditor_id) REFERENCES users (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT fk_product_user_group1 FOREIGN KEY (debtors_group_id) REFERENCES user_group (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
@@ -49,8 +49,8 @@ CREATE TABLE debt
   PRIMARY KEY(id)
   ,
   CONSTRAINT fk_debt_product1 FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_debt_user1 FOREIGN KEY (creditor_id) REFERENCES user (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT fk_debt_user2 FOREIGN KEY (debtor_id) REFERENCES user (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT fk_debt_user1 FOREIGN KEY (creditor_id) REFERENCES users (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT fk_debt_user2 FOREIGN KEY (debtor_id) REFERENCES users (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
 CREATE INDEX fk_debt_product1 ON debt (product_id);
