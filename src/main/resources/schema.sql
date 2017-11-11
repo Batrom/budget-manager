@@ -1,4 +1,4 @@
-CREATE TABLE users (
+/*CREATE TABLE users (
   id serial NOT NULL,
   name varchar(45) NOT NULL,
   PRIMARY KEY(id)
@@ -55,7 +55,7 @@ CREATE TABLE debt
 
 CREATE INDEX fk_debt_product1 ON debt (product_id);
 CREATE INDEX fk_debt_user1 ON debt (creditor_id);
-CREATE INDEX fk_debt_user2 ON debt (debtor_id);
+CREATE INDEX fk_debt_user2 ON debt (debtor_id);*/
 
 INSERT INTO users VALUES (1, "Bartek"), (2, "Aga"), (3, "Rafał");
 INSERT INTO user_group VALUES (1, "Wszyscy"), (2, "Rafał i Aga"), (3, "Bartek");
