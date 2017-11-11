@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This is bookmarker app">
+    <meta name="author" content="Bartosz Romanowski">
+
+    <title>Budget calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/9db34014b9.js"></script>
+    <script type="text/javascript" src="bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script type="text/javascript" src="js/date-fns.min.js"></script>
+    <!--<script type="text/javascript" src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>-->
+</head>
+
+<body data-ng-app="ngBudgetCalc" data-ng-cloak>
+<div data-ng-include="'navbar.html'"></div>
+<div class="container" data-ng-view data-ng-controller="mainController"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="js/app.js"></script>
+<script src="js/controller/mainController.js"></script>
+<script src="js/controller/editProductModalController.js"></script>
+<script src="js/controller/loginController.js"></script>
+<script src="js/controller/navController.js"></script>
+<script src="js/factory/productFactory.js"></script>
+<script src="js/factory/debtFactory.js"></script>
+<script src="js/service/debtService.js"></script>
+<script src="js/service/productService.js"></script>
+
+</body>
+</html>

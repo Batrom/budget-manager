@@ -1,0 +1,40 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th class="col-md-2">
+            Data
+        </th>
+        <th class="col-md-3">
+            Opis
+        </th>
+        <th class="col-md-2">
+            Cena
+        </th>
+        <th class="col-md-3">
+            Grupa docelowa
+        </th>
+        <th class="col-md-2">
+            Kupujący
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-ng-repeat="product in products | orderBy : 'creationDate' : true">
+        <td>
+            {{product.creationDate}}
+        </td>
+        <td>
+            {{product.description}}
+        </td>
+        <td>
+            {{product.price | polishCurrency}}
+        </td>
+        <td>
+            {{product.debtorsGroup}}
+        </td>
+        <td>
+            {{product.creditor}}
+        </td>
+    </tr>
+    </tbody>
+</table>
