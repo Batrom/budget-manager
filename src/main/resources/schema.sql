@@ -62,5 +62,6 @@ INSERT INTO users (id, name) VALUES (1, 'Bartek'), (2, 'Aga'), (3, 'Rafał');
 INSERT INTO user_group (id, name) VALUES (1, 'Wszyscy'), (2, 'Rafał i Aga'), (3, 'Bartek');
 INSERT INTO user_user_group (user_id, user_group_id) VALUES (1, 1), (1, 3), (2, 1), (2, 2), (3, 1), (3, 2);
 */
-
+/*
 ALTER TABLE debt RENAME cretiondate TO creation_date;
+*/
