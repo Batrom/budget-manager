@@ -1,4 +1,4 @@
-angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular.filter'])
+angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular.filter', 'ngCookies'])
     .config(function ($routeProvider, $qProvider) {
         $routeProvider
             .when('/login', {
@@ -21,9 +21,10 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
             });
         $qProvider.errorOnUnhandledRejections(false);
     })
-    .run(function ($rootScope, $location) {
+    .run(function ($location, $rootScope, userService) {
         $rootScope.$on("$routeChangeStart", function (event, next) {
-            if ($rootScope.loggedUser === null || $rootScope.loggedUser === undefined || $rootScope.loggedUser === "") {
+            let loggedUser = userService.getUser() || '';
+            if (loggedUser === null || loggedUser === undefined || loggedUser === '') {
                 if (next.templateUrl !== "view/login.html") {
                     $location.path("/login");
                 }

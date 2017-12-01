@@ -170,10 +170,6 @@ img {
     text-decoration: none;
 }
 
-.navbar-logged-user {
-    float: right;
-}
-
 .modal-content {
     color: #fff;
     border: 1px solid #101010;

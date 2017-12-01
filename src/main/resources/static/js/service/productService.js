@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .service('productService', function (productFactory, $rootScope, debtService) {
+    .service('productService', function (productFactory, debtService, userService) {
         let products = [];
         let userProducts = [];
         let todaysUserProducts = [];
@@ -23,7 +23,7 @@ angular.module('ngBudgetCalc')
                 .then(
                     function (response) {
                         fetchLoadProductsResponse(response);
-                        debtService.loadDebts($rootScope.loggedUser);
+                        debtService.loadDebts(userService.getUser().name);
                     },
                     function (error) {
                         console.error(error);
@@ -35,7 +35,7 @@ angular.module('ngBudgetCalc')
                 .then(
                     function (response) {
                         fetchSaveProductResponse(response);
-                        debtService.loadDebts($rootScope.loggedUser);
+                        debtService.loadDebts(userService.getUser().name);
                     },
                     function (error) {
                         console.error(error);
@@ -47,7 +47,7 @@ angular.module('ngBudgetCalc')
                 .then(
                     function (response) {
                         fetchEditProductResponse(response);
-                        debtService.loadDebts($rootScope.loggedUser);
+                        debtService.loadDebts(userService.getUser().name);
                     },
                     function (error) {
                         console.error(error);
@@ -59,7 +59,7 @@ angular.module('ngBudgetCalc')
                 .then(
                     function () {
                         fetchDeleteProductResponse(product);
-                        debtService.loadDebts($rootScope.loggedUser);
+                        debtService.loadDebts(userService.getUser().name);
 
                     },
                     function (error) {
@@ -70,7 +70,7 @@ angular.module('ngBudgetCalc')
         let fetchLoadProductsResponse = function (response) {
             products = response.data;
             userProducts = products.filter(prod => {
-                return prod.creditor === $rootScope.loggedUser;
+                return prod.creditor === userService.getUser().name;
             });
 
             todaysUserProducts = userProducts.filter(prod => {

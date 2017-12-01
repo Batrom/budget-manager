@@ -1,7 +1,6 @@
 angular.module('ngBudgetCalc')
-    .controller('mainController', function functionName($scope, productService, debtService, $rootScope, $uibModal) {
+    .controller('mainController', function functionName($scope, productService, debtService, $uibModal, userService) {
         $scope.productService = productService;
-        $rootScope.loggedUser = '';
         $scope.product = {};
 
         $scope.$watch(function () {
@@ -34,7 +33,7 @@ angular.module('ngBudgetCalc')
 
             $scope.product = {
                 "debtorsGroup": "Wszyscy",
-                "creditor": $rootScope.loggedUser
+                "creditor": userService.getUser().name
             };
             document.getElementById('productDescription').focus();
         };
@@ -57,18 +56,18 @@ angular.module('ngBudgetCalc')
         };
 
         $scope.signIn = function (u) {
-            $rootScope.loggedUser = u;
+            userService.setUser(u);
             $scope.init();
         };
 
         $scope.signOut = function () {
-            $rootScope.loggedUser = '';
+            userService.setUser('');
         };
 
         $scope.init = function () {
             $scope.product = {
                 "debtorsGroup": "Wszyscy",
-                "creditor": $rootScope.loggedUser
+                "creditor": userService.getUser().name
             };
             productService.loadProducts();
         };

@@ -1,5 +1,5 @@
-angular.module('ngBudgetCalc').controller('loginController', function ($scope, $rootScope) {
+angular.module('ngBudgetCalc').controller('loginController', function ($scope, userService) {
     $scope.setUser = function (u) {
-        $rootScope.loggedUser = u;
+        userService.setUser(u);
     };
 });

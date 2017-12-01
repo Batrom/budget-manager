@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .controller('editProductModalController', function($scope, product, productService, debtService, $rootScope, $uibModalInstance) {
+    .controller('editProductModalController', function($scope, product, productService, debtService, $uibModalInstance) {
         $scope.product = product;
 
         $scope.saveChanges = function () {
