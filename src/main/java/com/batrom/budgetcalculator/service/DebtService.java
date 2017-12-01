@@ -24,22 +24,8 @@ public class DebtService {
     @Autowired
     private DebtRepository debtRepository;
 
-    @Autowired
-    private UserService userService;
-
     public List<Debt> getAllDebts() {
         return debtRepository.findAll();
-    }
-
-    public void saveByProduct(final Product product) {
-        final List<User> debtors = product.getDebtorsGroup().getUsers();
-        final BigDecimal amount = product.getPrice().divide(BigDecimal.valueOf(debtors.size()), 2, RoundingMode.FLOOR);
-        final List<Debt> debts = debtors.stream()
-                                        .filter(debtor -> !debtor.equals(product.getCreditor()))
-                                        .map(debtor -> mapToDebt(product, amount, debtor))
-                                        .collect(toList());
-
-        debtRepository.save(debts);
     }
 
     public List<Debt> fillDebts(final Product product) {
@@ -59,10 +45,6 @@ public class DebtService {
         debt.setAmount(amount);
         debt.setCreationDate(product.getCreationDate());
         return debt;
-    }
-
-    public void deleteByProduct(final Product product) {
-        debtRepository.removeByProduct(product);
     }
 
     public List<DebtDTO> getDebtsByUser(final String user) {

@@ -72,7 +72,6 @@ public class ProductService {
 
     @Transactional
     public ProductDTO updateProduct(final ProductDTO productDTO) {
-//        debtService.deleteByProduct(product);
         return save(productDTO);
     }
 
