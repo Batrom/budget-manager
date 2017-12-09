@@ -59,7 +59,5 @@ CREATE INDEX fk_debt_user1 ON debt (creditor_id);
 CREATE INDEX fk_debt_user2 ON debt (debtor_id);
 
 INSERT INTO users (id, name) VALUES (1, 'Bartek'), (2, 'Aga'), (3, 'Rafał');
-INSERT INTO user_group (id, name) VALUES (1, 'Wszyscy'), (2, 'Rafał i Aga'), (3, 'Bartek');
+INSERT INTO user_group (id, name) VALUES (1, 'Wszyscy'), (2, 'Aga i Rafał'), (3, 'Bartek');
 INSERT INTO user_user_group (user_id, user_group_id) VALUES (1, 1), (1, 3), (2, 1), (2, 2), (3, 1), (3, 2);*/
-
-UPDATE user_group SET name = 'Aga i Rafał' WHERE  id = 2;

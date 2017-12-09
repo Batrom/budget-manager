@@ -3,7 +3,6 @@ package com.batrom.budgetcalculator.service;
 import com.batrom.budgetcalculator.model.Debt;
 import com.batrom.budgetcalculator.model.Product;
 import com.batrom.budgetcalculator.model.ProductDTO;
-import com.batrom.budgetcalculator.model.User;
 import com.batrom.budgetcalculator.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,11 +45,11 @@ public class ProductService {
         product.setDebts(debts);
         final Product savedProduct = productRepository.save(product);
 
-        if (!Objects.isNull(savedProduct)) {
-            return mapToProductDTO(savedProduct);
-        } else {
-            throw new RuntimeException();
+        if (Objects.isNull(savedProduct)) {
+            throw new NoSavedProductException();
         }
+
+        return mapToProductDTO(savedProduct);
     }
 
     private ProductDTO mapToProductDTO(final Product product) {
@@ -81,10 +80,13 @@ public class ProductService {
         product.setPrice(productDTO.getPrice());
         product.setDebtorsGroup(userGroupService.findByName(productDTO.getDebtorsGroup()));
         product.setCreditor(userService.findByName(productDTO.getCreditor()));
-        product.setCreationDate(LocalDate.now());
 
+        product.setCreationDate(Objects.isNull(productDTO.getCreationDate()) ? LocalDate.now() : LocalDate.parse(productDTO.getCreationDate()));
         Optional.ofNullable(productDTO.getId()).ifPresent(product::setId);
 
         return product;
+    }
+
+    private class NoSavedProductException extends RuntimeException {
     }
 }

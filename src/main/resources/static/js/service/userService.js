@@ -5,7 +5,7 @@ angular.module('ngBudgetCalc')
        };
 
        this.getUser = function () {
-           return loggedUser
+           return loggedUser;
        };
 
        this.setUser = function (user) {

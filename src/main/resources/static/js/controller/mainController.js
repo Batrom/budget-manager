@@ -60,10 +60,6 @@ angular.module('ngBudgetCalc')
             $scope.init();
         };
 
-        $scope.signOut = function () {
-            userService.setUser('');
-        };
-
         $scope.init = function () {
             $scope.product = {
                 "debtorsGroup": "Wszyscy",
@@ -71,6 +67,7 @@ angular.module('ngBudgetCalc')
             };
             productService.loadProducts();
         };
+        $scope.init();
     });
 
 

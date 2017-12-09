@@ -7,4 +7,8 @@ angular.module('ngBudgetCalc').controller('navController', function ($scope, $lo
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
+
+    $scope.signOut = function () {
+        userService.setUser('');
+    };
 });
