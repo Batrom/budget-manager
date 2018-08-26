@@ -1,6 +1,7 @@
 package com.batrom.budgetcalculator.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ import java.util.Objects;
 
 @Entity
 @Data
+@ToString
 @Table(name = "debt")
 public class Debt {
 
@@ -16,18 +18,15 @@ public class Debt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User creditor;
+    @ManyToOne
+    private Member creditor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User debtor;
+    @ManyToOne
+    private Member debtor;
 
     private BigDecimal amount;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Product product;
-
-    private LocalDate creationDate;
+    private LocalDate date;
 
     @Override
     public boolean equals(Object o) {

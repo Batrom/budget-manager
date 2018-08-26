@@ -1,15 +1,17 @@
 package com.batrom.budgetcalculator.model;
 
+import com.batrom.budgetcalculator.enums.Category;
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Data
+@ToString
 @Table(name = "product")
 public class Product {
 
@@ -21,16 +23,16 @@ public class Product {
 
     private BigDecimal price;
 
+    @ManyToOne
+    private Member creditor;
+
+    @ManyToOne
+    private MemberGroup debtorGroup;
+
+    @Enumerated(EnumType.STRING)
+    private Category category;
+
     private LocalDate creationDate;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User creditor;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private UserGroup debtorsGroup;
-
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Debt> debts;
 
     @Override
     public boolean equals(Object o) {
@@ -44,17 +46,5 @@ public class Product {
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", creationDate=" + creationDate +
-                ", creditor=" + creditor +
-                ", debtorsGroup=" + debtorsGroup +
-                '}';
     }
 }

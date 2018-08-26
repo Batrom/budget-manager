@@ -1,30 +1,26 @@
 <div class="jumbotron">
     <h2>Dodaj zakupy</h2>
-    <form id="myForm" data-ng-submit="save()">
+    <form id="myForm" data-ng-submit="saveProduct()">
         <div class="row">
             <div class="col-md-7">
                 <div class="form-group">
-                    <label>Description</label>
+                    <label>Opis</label>
                     <input id="productDescription" type="text" class="form-control" autofocus
-                           placeholder="Product description" data-ng-model="product.description" required>
+                           placeholder="Opis produktu" data-ng-model="product.description" required>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
-                    <label>Price</label>
-                    <input id="productPrice" type="number" class="form-control" placeholder="Product price"
+                    <label>Cena</label>
+                    <input id="productPrice" type="number" class="form-control" placeholder="Cena produktu"
                            data-ng-model="product.price" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
                            required/>
-                    </span>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label>Group</label>
-                    <select id="userGroup" class="form-control" data-ng-model="product.debtorsGroup">
-                        <option value="Wszyscy">Wszyscy</option>
-                        <option value="Aga i Rafał">Aga i Rafał</option>
-                        <option value="Bartek">Bartek</option>
+                    <label>Grupa docelowa</label>
+                    <select class="form-control" data-ng-model="product.debtorGroup" data-ng-options="group for group in memberGroups">
                     </select>
                 </div>
             </div>
@@ -33,7 +29,7 @@
     </form>
 </div>
 <div id="products">
-    <div data-ng-repeat="product in todaysUserProducts | orderBy : 'creationDate' : true">
+    <div data-ng-repeat="product in products | orderBy : 'creationDate' : true">
         <div class="well well-container-narrow">
             <div class="row row-equal">
                 <div class="col-sm-6">
@@ -48,7 +44,7 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="well well-product">
-                        <h4>{{product.debtorsGroup}}</h4>
+                        <h4>{{product.debtorGroup}}</h4>
                     </div>
                 </div>
                 <div class="col-sm-1">
@@ -56,7 +52,7 @@
                         <i class="fa fa-pencil-square-o fa-2x fa-center"></i></button>
                 </div>
                 <div class="col-sm-1">
-                    <button type="button" class="btn btn-danger btn-edit-product" data-ng-click="delete(product)">
+                    <button type="button" class="btn btn-danger btn-edit-product" data-ng-click="deleteProduct(product)">
                         <i class="fa fa-trash-o fa-2x fa-center"></i></button>
                 </div>
             </div>

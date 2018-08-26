@@ -1,0 +1,121 @@
+.angular-ui-tree {
+    border: 2px dashed #101010;
+    min-height: 219px;
+    border-radius: 5px;
+    background: #333 none;
+}
+
+#products-without-category.angular-ui-tree {
+    min-height: 458px;
+}
+
+.angular-ui-tree-handle {
+    background: #f5f5f5;
+    border: 1px solid #101010;
+    color: #333;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.angular-ui-tree-handle:hover {
+    color: #545454;
+}
+
+.angular-ui-tree-placeholder {
+    margin-top: 3px;
+    border-radius: 5px;
+    background: #333;
+    border: 2px dashed #101010;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.angular-ui-tree-empty {
+    border: none;
+    border-radius: 5px;
+    background: #333 none;
+}
+
+#assign-product-category div.angular-ui-tree {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#assign-product-category h5 {
+    color: #f5f5f5;
+    text-align: center;
+}
+
+#assign-product-category li:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+#assign-product-category ol {
+    padding: 3px;
+    max-height: 180px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#assign-product-category .col-md-3 ol {
+    max-height: 419px;
+}
+
+#assign-product-category ol::-webkit-scrollbar-track {
+    border: 1px solid #101010;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+#assign-product-category ol::-webkit-scrollbar {
+    width: 12px;
+    background-color: #333;
+}
+
+#assign-product-category ol::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px #101010;
+    background-color: #545454;
+}
+
+#assign-product-category table td {
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0; !important;
+}
+
+.btn-save-category {
+    --background-color: #f5f5f5;
+    --color: #545454;
+    --hover: #333;
+    --border: #101010;
+}
+
+button.btn-save-category {
+    height: 80px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 21px;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--color);
+    border: 1px solid var(--hover);
+    border-radius: 5px;
+
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+button.btn-save-category:hover,
+button.btn-save-category:focus {
+    -webkit-box-shadow: 0 0.5em 0.5em -0.4em var(--border);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--border);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+    background-color: var(--background-color);
+    border-color: var(--border);
+    color: var(--hover);
+}
