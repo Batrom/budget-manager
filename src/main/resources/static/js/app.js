@@ -7,69 +7,65 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
             })
             .when('/home', {
                 templateUrl: 'view/home.html',
-                controller: 'homeController',
-                authenticated: true
+                controller: 'homeController'
             })
             .when('/addProduct', {
                 templateUrl: 'view/addProduct.html',
                 controller: 'productController',
                 resolve: {
                     productsType: () => products.TODAYS_MEMBER
-                },
-                authenticated: true
+                }
             })
             .when('/myProducts', {
                 templateUrl: 'view/myProducts.html',
                 controller: 'productController',
                 resolve: {
                     productsType: () => products.MEMBER
-                },
-                authenticated: true
+                }
             })
             .when('/allProducts', {
                 templateUrl: 'view/allProducts.html',
                 controller: 'productController',
                 resolve: {
                     productsType: () => products.ALL
-                },
-                authenticated: true
+                }
             })
             .when('/debts', {
                 templateUrl: 'view/debts.html',
-                controller: 'debtController',
-                authenticated: true
+                controller: 'debtController'
             })
             .when('/duties', {
-                templateUrl: 'view/duties.html',
-                authenticated: true
+                templateUrl: 'view/duties.html'
             })
             .when('/assignCategory', {
                 templateUrl: 'view/assignProductCategory.html',
-                controller: 'AssignProductCategoryController',
-                authenticated: true
+                controller: 'AssignProductCategoryController'
             })
             .when('/charts', {
                 templateUrl: 'view/charts.html',
-                controller: 'chartController',
-                authenticated: true
+                controller: 'chartController'
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/login'
             });
         $qProvider.errorOnUnhandledRejections(false);
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     })
     .run(function ($location, $rootScope, authenticationService) {
         $rootScope.$on("$routeChangeStart", function (event, next) {
-            if (authenticationService.isAuthenticated()) {
-                if (next.$$route !== undefined && next.$$route.originalPath === '/login') {
-                    $location.path("/home");
+            if (!$rootScope.authenticated) $location.path("/login");
+            authenticationService.authenticate().then(isAuthenticated => {
+                if (isAuthenticated) {
+                    if (next.$$route === undefined || next.$$route.originalPath === '/login') {
+                        $location.path("/home");
+                    } else {
+                        $location.path(next.$$route.originalPath);
+                    }
                 }
-            } else {
-                if (next.$$route === undefined || next.$$route.authenticated) {
-                    $location.path('/login');
+                else {
+                    $location.path("/login");
                 }
-            }
+            });
         });
     })
     .directive('autofocus', [function () {

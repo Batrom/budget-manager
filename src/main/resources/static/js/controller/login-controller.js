@@ -2,18 +2,18 @@ angular.module('ngBudgetCalc').controller('loginController', function ($scope, $
     redirectToHomeIfAlreadyAuthenticated();
     $scope.credentials = {};
     $scope.login = function () {
-        authenticationService.authenticate($scope.credentials, function () {
-            if (authenticationService.isAuthenticated()) {
+        authenticationService.authenticate($scope.credentials).then(isAuthenticated => {
+            if (isAuthenticated) {
                 $location.path("/home");
-                $scope.error = false;
             } else {
                 $location.path("/login");
-                $scope.error = true;
             }
         });
     };
 
     function redirectToHomeIfAlreadyAuthenticated() {
-        if (authenticationService.isAuthenticated()) $location.path("/home");
+        authenticationService.authenticate().then(isAuthenticated => {
+            if (isAuthenticated) $location.path("/home");
+        });
     }
 });
