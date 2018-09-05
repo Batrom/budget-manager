@@ -28,33 +28,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
     }
 
-/*    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/resources/**");
-    }*/
-
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
-        /*
-        http.httpBasic().and().authorizeRequests()
-            .antMatchers("/resources/**").permitAll()
-            .antMatchers("/", "/login").permitAll()
-            .anyRequest().authenticated()
-//            .and()
-//            .formLogin()
-//            .loginPage("/login")
-//            .permitAll()
-            .and()
-            .csrf().csrfTokenRepository(csrfTokenRepository())
-            .and()
-            .logout()
-            .and()
-            .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);*/
-//        http.httpBasic().disable();
 
         http.httpBasic().and().authorizeRequests()
             .antMatchers("/js/**", "/css/**", "/bootstrap/**", "/view/**").permitAll()
-            .antMatchers("/", "index.html").permitAll()
+            .antMatchers("/", "/user", "index.html").permitAll()
             .anyRequest().authenticated()
             .and()
             .csrf().csrfTokenRepository(csrfTokenRepository())

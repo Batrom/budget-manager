@@ -89,7 +89,9 @@ public class DebtService {
 
     private BigDecimal calculateAmount(final Product product) {
         return product.getPrice()
-                      .divide(BigDecimal.valueOf(product.getDebtorGroup().getMembers().size()), 8, RoundingMode.HALF_UP);
+                      .divide(BigDecimal.valueOf(product.getDebtorGroup()
+                                                        .getMembers()
+                                                        .size()), 8, RoundingMode.HALF_UP);
     }
 
     private List<Debt> calculateSingleProductDebts(final Product product, final BigDecimal amount) {
