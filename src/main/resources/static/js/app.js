@@ -53,7 +53,6 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
     })
     .run(function ($location, $rootScope, authenticationService) {
         $rootScope.$on("$routeChangeStart", function (event, next) {
-            if (!$rootScope.authenticated) $location.path("/login");
             authenticationService.authenticate().then(isAuthenticated => {
                 if (isAuthenticated) {
                     if (next.$$route === undefined || next.$$route.originalPath === '/login') {

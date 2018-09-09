@@ -1,13 +1,10 @@
 angular.module('ngBudgetCalc')
     .service('authenticationService', function ($http, $rootScope, $q) {
-        this.authenticate = credentials => {
+        this.authenticate = () => {
             let deferred = $q.defer();
             if ($rootScope.authenticated) deferred.resolve(true);
             else {
-                let headers = credentials ? {
-                    authorization: "Basic " + btoa(credentials.username + ":" + credentials.password)
-                } : {};
-                $http.get('/user', {headers: headers}).then(response => {
+                $http.get('user').then(response => {
                     $rootScope.authenticated = !!response.data.authenticated;
                     deferred.resolve($rootScope.authenticated)
                 }, response => {

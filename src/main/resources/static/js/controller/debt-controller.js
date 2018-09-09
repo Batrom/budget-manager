@@ -3,5 +3,5 @@ angular.module('ngBudgetCalc').controller('debtController', function ($scope, me
     $scope.getDebtText = debt => debtService.getDebtText(debt);
 
     $rootScope.$on(event.GET_DEBTS, () => $scope.debts = debtService.getDebts());
-    (() => debtService.loadDebts(memberService.getMember().name))();
+    debtService.loadDebts(memberService.getMember().name);
 });

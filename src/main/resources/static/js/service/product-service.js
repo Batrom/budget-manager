@@ -8,25 +8,25 @@ angular.module('ngBudgetCalc')
         let loadProductsSuccess = function (response) {
             return restService.fetchData(() => {
                 products = response.data;
-            }, event.GET_PRODUCTS);
+            }, event.PRODUCTS_CHANGED);
         };
 
         let saveProductSuccess = function (response) {
             return restService.fetchData(() => {
                 products.push(response.data);
-            }, event.GET_PRODUCTS);
+            }, event.PRODUCTS_CHANGED);
         };
 
         let updateProductSuccess = function (response) {
             return restService.fetchData(() => {
                 products = products.map(prod => getRightIfEquals(prod, response.data));
-            }, event.GET_PRODUCTS);
+            }, event.PRODUCTS_CHANGED);
         };
 
         let deleteProductSuccess = function (response) {
             return restService.fetchData(() => {
                 products = products.filter(prod => prod.id !== response.data.id);
-            }, event.GET_PRODUCTS)
+            }, event.PRODUCTS_CHANGED)
         };
 
         let loadProductsByCategorySuccess = function (response) {

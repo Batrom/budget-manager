@@ -1,5 +1,5 @@
-<nav class="navbar navbar-inverse" data-ng-controller="navController" data-ng-hide="isHomeOrLoginView()">
-    <div class="container-fluid">
+<nav class="navbar navbar-inverse" data-ng-controller="navController" data-ng-hide="isLoginView()">
+    <div class="container-fluid" data-ng-hide="isHomeView()">
         <div class="navbar-header">
             <span class="navbar-brand">Witaj {{loggedMember.name}}!</span>
         </div>
@@ -10,13 +10,19 @@
                 <li ng-class="{ active: isActive('/allProducts')}"><a href="#!/allProducts">Wszystkie produkty</a></li>
                 <li ng-class="{ active: isActive('/debts')}"><a href="#!/debts">Rozliczenia</a></li>
                 <li ng-class="{ active: isActive('/duties')}"><a href="#!/duties">Obowiązki</a></li>
-                <li ng-class="{ active: isActive('/assignCategory')}"><a href="#!/assignCategory">Przypisz kategorię</a></li>
+                <li ng-class="{ active: isActive('/assignCategory')}"><a href="#!/assignCategory">Przypisz kategorię</a>
+                </li>
                 <li ng-class="{ active: isActive('/chart')}"><a href="#!/charts">Zobacz wykresy</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#!/home" data-ng-click="logOut()"><i class="fa fa-sign-out fa-lg"
-                                                                    aria-hidden="true"></i></a></li>
+                <li><a href="#!/home" data-ng-click="innerLogOut()"><i class="fa fa-sign-out fa-lg"
+                                                                       aria-hidden="true"></i></a></li>
             </ul>
         </div>
+    </div>
+    <div class="container-fluid" data-ng-show="isHomeView()">
+        <ul class="nav navbar-nav navbar-right btn-logout">
+            <li><a href="#!/home" data-ng-click="logOut()">Wyloguj</a></li>
+        </ul>
     </div>
 </nav>

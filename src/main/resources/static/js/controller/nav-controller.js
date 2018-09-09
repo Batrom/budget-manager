@@ -1,15 +1,17 @@
-angular.module('ngBudgetCalc').controller('navController', function ($scope, $location, memberService, $rootScope, event) {
+angular.module('ngBudgetCalc').controller('navController', function ($scope, $location, memberService, $rootScope, event, $http) {
     $scope.loggedMember = memberService.getMember();
-    $rootScope.$on(event.GET_MEMBER, () => $scope.loggedMember = memberService.getMember());
-    $scope.isHomeOrLoginView = function () {
-        return $location.path() === '/home' || $location.path() === '/login';
-    };
+    $rootScope.$on(event.MEMBER_CHANGED, () => $scope.loggedMember = memberService.getMember());
 
-    $scope.isActive = function (viewLocation) {
-        return viewLocation === $location.path();
-    };
-
-    $scope.logOut = function () {
-        memberService.remove();
-    };
+    $scope.isHomeView = () => $location.path() === '/home';
+    $scope.isLoginView = () => $location.path() === '/login';
+    $scope.isActive = viewLocation => viewLocation === $location.path();
+    $scope.innerLogOut = () => memberService.remove();
+    $scope.logOut = () => {
+        $http.post('logout', {}).then(response => {
+            $rootScope.authenticated = false;
+            $location.path("/login");
+        }, response => {
+            $rootScope.authenticated = false;
+        });
+    }
 });

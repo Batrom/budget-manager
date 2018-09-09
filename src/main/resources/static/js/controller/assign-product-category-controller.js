@@ -19,6 +19,5 @@ angular.module('ngBudgetCalc').controller('AssignProductCategoryController', fun
         productService.updateProductsCategory($scope.productsByCategory);
     };
 
-    (() => productService.loadProductsByCategory(memberService.getMember().name))();
-
+    productService.loadProductsByCategory(memberService.getMember().name);
 });
