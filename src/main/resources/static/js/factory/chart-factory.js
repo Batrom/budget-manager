@@ -1,6 +1,6 @@
 angular.module('ngBudgetCalc')
-    .factory('chartFactory', function (restFactory, url) {
+    .factory('ChartFactory', function (RestFactory, url) {
         return {
-            getChartData: restFactory.get(url.getChartData)
+            getChartData: RestFactory.get(url.getChartData)
         }
     });

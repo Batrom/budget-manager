@@ -14,10 +14,6 @@ public class MemberService {
         return memberRepository.findByName(name);
     }
 
-    public List<Member> findAll() {
-        return memberRepository.findAll();
-    }
-
     private final MemberRepository memberRepository;
 
     @Autowired

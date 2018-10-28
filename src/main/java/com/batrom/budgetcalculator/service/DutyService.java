@@ -26,8 +26,9 @@ public class DutyService {
         return save(dto);
     }
 
-    public void delete(final DutyDTO dto) {
+    public Long delete(final DutyDTO dto) {
         dutyRepository.deleteById(dto.getId());
+        return dto.getId();
     }
 
     public List<DutyDTO> getAll() {

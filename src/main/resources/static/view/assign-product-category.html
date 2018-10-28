@@ -1,0 +1,74 @@
+<div class="row" id="assign-product-category">
+    <div class="col-md-4">
+        <select class="form-control"
+                data-ng-model="leftColumnCategoryType"
+                data-ng-options="category.polishName for category in productCategories">
+        </select>
+        <div class="category-container"
+             data-drop="true"
+             ng-model="productsByCategory[leftColumnCategoryType.name]"
+             data-jqyoui-options="{accept:'.product-to-assign-category:not([class=left])', classes: 'ui-draggable: left'}"
+             jqyoui-droppable="{multiple:true}">
+            <div class="product-to-assign-category"
+                 ng-repeat="product in productsByCategory[leftColumnCategoryType.name]"
+                 ng-show="product.description"
+                 data-drag=true
+                 data-jqyoui-options="{revert: 'invalid'}"
+                 ng-model="productsByCategory[leftColumnCategoryType.name]"
+                 jqyoui-draggable="{index: {{$index}}, animate:true}">
+                <div class="row">
+                    <div class="col-md-8">{{product.description}}</div>
+                    <div class="col-md-4 text-right">{{product.price}} zł</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <select class="form-control"
+                data-ng-model="middleColumnCategoryType"
+                data-ng-options="category.polishName for category in productCategories">
+        </select>
+        <div class="category-container"
+             data-drop="true"
+             ng-model="productsByCategory[middleColumnCategoryType.name]"
+             data-jqyoui-options="{accept:'.product-to-assign-category:not([class=middle])', classes: 'ui-draggable: middle'}"
+             jqyoui-droppable="{multiple:true}">
+            <div class="product-to-assign-category"
+                 ng-repeat="product in productsByCategory[middleColumnCategoryType.name]"
+                 ng-show="product.description"
+                 data-drag=true
+                 data-jqyoui-options="{revert: 'invalid'}"
+                 ng-model="productsByCategory[middleColumnCategoryType.name]"
+                 jqyoui-draggable="{index: {{$index}}, animate:true}">
+                <div class="row">
+                    <div class="col-md-8">{{product.description}}</div>
+                    <div class="col-md-4 text-right">{{product.price}} zł</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <select class="form-control"
+                data-ng-model="rightColumnCategoryType"
+                data-ng-options="category.polishName for category in productCategories">
+        </select>
+        <div class="category-container"
+             data-drop="true"
+             ng-model="productsByCategory[rightColumnCategoryType.name]"
+             data-jqyoui-options="{accept:'.product-to-assign-category:not([class=right])', classes: 'ui-draggable: right'}"
+             jqyoui-droppable="{multiple:true}">
+            <div class="product-to-assign-category"
+                 ng-repeat="product in productsByCategory[rightColumnCategoryType.name]"
+                 ng-show="product.description"
+                 data-drag=true
+                 data-jqyoui-options="{revert: 'invalid'}"
+                 ng-model="productsByCategory[rightColumnCategoryType.name]"
+                 jqyoui-draggable="{index: {{$index}}, animate:true}">
+                <div class="row">
+                    <div class="col-md-8">{{product.description}}</div>
+                    <div class="col-md-4 text-right">{{product.price}} zł</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

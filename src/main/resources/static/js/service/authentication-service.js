@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .service('authenticationService', function ($http, $rootScope, $q) {
+    .service('AuthenticationService', function ($http, $rootScope, $q) {
         this.authenticate = () => {
             let deferred = $q.defer();
             if ($rootScope.authenticated) deferred.resolve(true);
@@ -14,4 +14,8 @@ angular.module('ngBudgetCalc')
             }
             return deferred.promise;
         };
+
+        this.clearData = () => {
+            $rootScope.authenticated = false;
+        }
     });

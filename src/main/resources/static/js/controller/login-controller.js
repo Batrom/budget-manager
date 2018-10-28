@@ -1,4 +1,4 @@
-angular.module('ngBudgetCalc').controller('loginController', function ($scope, $location, $http, authenticationService, $rootScope, $httpParamSerializerJQLike) {
+angular.module('ngBudgetCalc').controller('LoginController', function ($scope, $location, $http, AuthenticationService, $rootScope, $httpParamSerializerJQLike) {
     redirectToHomeIfAlreadyAuthenticated();
 
     $scope.credentials = {};
@@ -8,7 +8,7 @@ angular.module('ngBudgetCalc').controller('loginController', function ($scope, $
                 "content-type": "application/x-www-form-urlencoded"
             }
         }).then(response => {
-            authenticationService.authenticate().then(isAuthenticated => {
+            AuthenticationService.authenticate().then(isAuthenticated => {
                 if (isAuthenticated) {
                     $location.path("/home");
                 } else {
@@ -22,7 +22,7 @@ angular.module('ngBudgetCalc').controller('loginController', function ($scope, $
     };
 
     function redirectToHomeIfAlreadyAuthenticated() {
-        authenticationService.authenticate().then(isAuthenticated => {
+        AuthenticationService.authenticate().then(isAuthenticated => {
             if (isAuthenticated) $location.path("/home");
         });
     }

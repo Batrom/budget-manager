@@ -13,9 +13,8 @@ public class DateUtils {
         return LocalDate.parse(date, DateTimeFormatter.ofPattern(pattern));
     }
 
-    public static boolean isThisMonth(final LocalDate date) {
-        final LocalDate now = LocalDate.now();
-        return date.getMonth().equals(now.getMonth()) && date.getYear() == now.getYear();
+    public static LocalDate getSixtyDaysAgo() {
+        return LocalDate.now().minusDays(60);
     }
 
     public static LocalDate getFirstDayOfThisMonth() {

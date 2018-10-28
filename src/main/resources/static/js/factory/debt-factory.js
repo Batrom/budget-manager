@@ -1,6 +1,6 @@
 angular.module('ngBudgetCalc')
-    .factory('debtFactory', function (restFactory, url) {
+    .factory('DebtFactory', function (RestFactory, url) {
         return {
-            getDebts: restFactory.get(url.getDebts)
+            getDebts: RestFactory.get(url.getDebts)
         }
     });

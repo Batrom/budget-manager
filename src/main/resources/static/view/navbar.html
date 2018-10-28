@@ -1,17 +1,15 @@
-<nav class="navbar navbar-inverse" data-ng-controller="navController" data-ng-hide="isLoginView()">
+<nav class="navbar navbar-inverse" data-ng-controller="NavController" data-ng-hide="isLoginView()">
     <div class="container-fluid" data-ng-hide="isHomeView()">
         <div class="navbar-header">
             <span class="navbar-brand">Witaj {{loggedMember.name}}!</span>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li ng-class="{ active: isActive('/addProduct')}"><a href="#!/addProduct">Dodaj produkt</a></li>
-                <li ng-class="{ active: isActive('/myProducts')}"><a href="#!/myProducts">Moje produkty</a></li>
-                <li ng-class="{ active: isActive('/allProducts')}"><a href="#!/allProducts">Wszystkie produkty</a></li>
+                <li ng-class="{ active: isActive('/product/new')}"><a href="#!/product/new">Dodaj produkt</a></li>
+                <li ng-class="{ active: isActive('/product/list')}"><a href="#!/product/list">Wszystkie produkty</a></li>
                 <li ng-class="{ active: isActive('/debts')}"><a href="#!/debts">Rozliczenia</a></li>
                 <li ng-class="{ active: isActive('/duties')}"><a href="#!/duties">Obowiązki</a></li>
-                <li ng-class="{ active: isActive('/assignCategory')}"><a href="#!/assignCategory">Przypisz kategorię</a>
-                </li>
+                <li ng-class="{ active: isActive('/product/category')}"><a href="#!/product/category">Przypisz kategorię</a></li>
                 <li ng-class="{ active: isActive('/chart')}"><a href="#!/charts">Zobacz wykresy</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

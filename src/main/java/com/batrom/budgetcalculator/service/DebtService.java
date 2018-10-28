@@ -6,7 +6,6 @@ import com.batrom.budgetcalculator.model.Member;
 import com.batrom.budgetcalculator.model.Product;
 import com.batrom.budgetcalculator.repository.DebtRepository;
 import com.batrom.budgetcalculator.util.DateUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,8 +39,7 @@ public class DebtService {
     @Transactional
     public List<DebtDTO> getDebtsByMember(final String memberName) {
         return wrapToFunction(memberService::findByName)
-                .andThen(member -> wrapToFunction
-                        (productService::findProductsByDebtorOrCreditorFromThisMonth)
+                .andThen(member -> wrapToFunction(productService::findProductsForDebtsView)
                         .andThen(this::calculateDebts)
                         .andThen(debts -> filterDebtsForMember(member, debts))
                         .andThen(debts -> Stream.of(debts, debtRepository.findDebtsByDebtor(member))
@@ -53,7 +51,7 @@ public class DebtService {
                 .apply(memberName);
     }
 
-    private List<Debt> filterDebtsForMember(Member member, List<Debt> debts) {
+    private List<Debt> filterDebtsForMember(final Member member, final List<Debt> debts) {
         return debts.stream()
                     .filter(debt -> member.equals(debt.getDebtor()))
                     .collect(toList());
@@ -131,7 +129,7 @@ public class DebtService {
         return Arrays.asList(debt.getCreditor(), debt.getDebtor(), debt.getDate());
     }
 
-    private Debt entryToDebt(Map.Entry<List<Object>, BigDecimal> entry) {
+    private Debt entryToDebt(final Map.Entry<List<Object>, BigDecimal> entry) {
         final Debt debt = new Debt();
         debt.setCreditor((Member) entry.getKey().get(0));
         debt.setDebtor((Member) entry.getKey().get(1));
@@ -155,9 +153,7 @@ public class DebtService {
 
     private final MemberService memberService;
 
-    @Autowired
-    public DebtService(final DebtRepository debtRepository, final ProductService productService, final MemberService
-            memberService) {
+    public DebtService(final DebtRepository debtRepository, final ProductService productService, final MemberService memberService) {
         this.debtRepository = debtRepository;
         this.productService = productService;
         this.memberService = memberService;

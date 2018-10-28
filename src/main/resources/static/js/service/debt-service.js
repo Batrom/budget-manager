@@ -1,10 +1,10 @@
 angular.module('ngBudgetCalc')
-    .service('debtService', function (debtFactory, restService, event) {
+    .service('DebtService', function (DebtFactory, RestService, Event) {
         let debts = [];
         const months = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"];
 
-        let loadDebtsSuccess = function(response) {
-            return restService.fetchData(() => {
+        let loadDebtsCallback = function (response) {
+            return RestService.fetchData(() => {
                 debts = response.data.sort((a, b) => {
                     a = a.creationDate.split('.').reverse().join('');
                     b = b.creationDate.split('.').reverse().join('');
@@ -14,17 +14,21 @@ angular.module('ngBudgetCalc')
                     debt.creationDate = months[debtArray[0] - 1] + ' ' + debtArray[1];
                     return debt;
                 });
-            }, event.GET_DEBTS)
+            }, Event.DEBTS_CHANGED)
         };
 
-        this.loadDebts = debtFactory.getDebts(loadDebtsSuccess);
+        this.loadDebts = DebtFactory.getDebts(loadDebtsCallback);
         this.getDebts = () => debts;
         this.getDebtText = function (debt) {
             let formattedDebt = Number(Math.abs(debt.debt)).toFixed(2).toString().replace('.', ',') + ' zł';
             if (debt.debt > 0) {
                 return 'Masz do oddania ' + formattedDebt + ' użytkownikowi ' + debt.otherMember;
             } else if (debt.debt < 0) {
-                return 'Użytkownik ' + debt.otherMember + ' powinien Ci oddać ' + formattedDebt;
+                return 'Użytkownik ' + debt.otherMember + ' powinien Ci oddać <b>' + formattedDebt + '</b>';
             }
         };
+
+        this.clearData = () => {
+            debts = [];
+        }
     });

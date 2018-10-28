@@ -1,11 +1,10 @@
 angular.module('ngBudgetCalc')
-    .factory('productFactory', function (restFactory, url) {
+    .factory('ProductFactory', function (RestFactory, url) {
         return {
-            getProducts: restFactory.get(url.getProducts),
-            saveProduct: restFactory.post(url.saveProduct),
-            deleteProduct: restFactory.post(url.deleteProduct),
-            updateProduct: restFactory.post(url.updateProduct),
-            updateProductsCategory: restFactory.post(url.updateProductsCategory),
-            getProductsByCategory: restFactory.get(url.getProductsByCategory)
+            getProducts: RestFactory.get(url.getProducts),
+            saveProduct: RestFactory.post(url.saveProduct),
+            deleteProduct: RestFactory.post(url.deleteProduct),
+            updateProduct: RestFactory.post(url.updateProduct),
+            updateProductsCategory: RestFactory.post(url.updateProductsCategory),
         }
     });

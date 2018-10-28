@@ -15,17 +15,17 @@ import java.util.List;
 @CommonsLog
 @RestController
 @RequestMapping("/debt")
-public class DebtController extends BaseRestController {
+public class DebtRestController extends BaseRestController {
 
     @GetMapping(value = "/getAll")
     public ResponseEntity<List<DebtDTO>> getAll(@RequestParam(name = "member") final String member) {
-        return get(member, debtService::getDebtsByMember);
+        return execute(member, debtService::getDebtsByMember);
     }
 
     private final DebtService debtService;
 
     @Autowired
-    public DebtController(final DebtService debtService) {
+    public DebtRestController(final DebtService debtService) {
         this.debtService = debtService;
     }
 }

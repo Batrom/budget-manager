@@ -4,17 +4,19 @@
         <th class="col-md-2">
             Data
         </th>
-        <th class="col-md-3">
+        <th class="col-md-2">
             Opis
         </th>
         <th class="col-md-2">
             Cena
         </th>
-        <th class="col-md-3">
+        <th class="col-md-2">
             Grupa docelowa
         </th>
         <th class="col-md-2">
             Kupujący
+        </th>
+        <th class="col-md-2">
         </th>
     </tr>
     </thead>
@@ -34,6 +36,16 @@
         </td>
         <td>
             {{product.creditor}}
+        </td>
+        <td>
+            <div data-ng-show="isLoggedMemberProduct(product)">
+                <button type="button" class="btn btn-warning btn-edit-product-list" data-ng-click="openUpdateProductModal(product)">
+                    <i class="fa fa-pencil-square-o fa-lg"></i>
+                </button>
+                <button type="button" class="btn btn-danger btn-edit-product-list" data-ng-click="deleteProduct(product)">
+                    <i class="fa fa-trash-o fa-lg"></i>
+                </button>
+            </div>
         </td>
     </tr>
     </tbody>

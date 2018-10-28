@@ -1,9 +1,9 @@
 angular.module('ngBudgetCalc')
-    .factory('dutyFactory', function (restFactory, url) {
+    .factory('DutyFactory', function (RestFactory, url) {
         return {
-            getDuties: restFactory.get(url.getDuties),
-            saveDuty: restFactory.post(url.saveDuty),
-            deleteDuty: restFactory.post(url.deleteDuty),
-            updateDuty: restFactory.post(url.updateDuty)
+            getDuties: RestFactory.get(url.getDuties),
+            saveDuty: RestFactory.post(url.saveDuty),
+            deleteDuty: RestFactory.post(url.deleteDuty),
+            updateDuty: RestFactory.post(url.updateDuty)
         }
     });

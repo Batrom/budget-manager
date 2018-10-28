@@ -1,0 +1,33 @@
+.debt-list {
+    margin-bottom: 0;
+}
+
+.debt-list li {
+    margin-top: 10px;
+    color: var(--bc-darker-color);
+}
+
+.debt-list li:first-child {
+    margin-top: 0;
+}
+
+.panel-title a {
+    display: block;
+}
+
+.panel-title a:link {
+    text-decoration: none;
+}
+
+.panel-title a:visited {
+    text-decoration: none;
+}
+
+.panel-title a:hover {
+    text-decoration: none;
+    color: var(--bc-dark-color);
+}
+
+.panel-title a:active {
+    text-decoration: none;
+}

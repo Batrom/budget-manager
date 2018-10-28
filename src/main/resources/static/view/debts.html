@@ -2,7 +2,7 @@
     <div uib-accordion-group class="panel-default" heading="{{key}}" data-ng-repeat="(key, values) in debts | groupBy: 'creationDate'">
         <ul class="debt-list">
             <li data-ng-repeat="value in values">
-                {{getDebtText(value)}}
+                <span data-ng-bind-html="getDebtText(value)"></span>
             </li>
         </ul>
     </div>

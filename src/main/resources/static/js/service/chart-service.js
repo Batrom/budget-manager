@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .service('chartService', function (chartFactory, restService, event) {
+    .service('ChartService', function (ChartFactory, RestService, Event) {
         let data = [];
         const months = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"];
 
@@ -17,9 +17,13 @@ angular.module('ngBudgetCalc')
                 };
             });
         };
-        let loadChartDataSuccess = function (response) {
-            return restService.fetchData(() => data = formatChartData(response.data), event.GET_CHART_DATA)
+        let loadChartDataCallback = function (response) {
+            return RestService.fetchData(() => data = formatChartData(response.data), Event.CHART_DATA_CHANGED)
         };
         this.getData = () => data;
-        this.loadChartData = chartFactory.getChartData(loadChartDataSuccess);
+        this.loadChartData = ChartFactory.getChartData(loadChartDataCallback);
+
+        this.clearData = () => {
+            data = [];
+        }
     });

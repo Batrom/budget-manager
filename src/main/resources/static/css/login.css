@@ -6,8 +6,8 @@
 
     font-size: 14px;
     text-align: center;
-    border: 1px solid var(--bc-border-color);
-    background: var(--bc-content-background-color);
+    border: 1px solid var(--bc-darkest-color);
+    background: var(--bc-darker-color);
     border-radius: 12px;
     margin: auto;
     width: 100%;

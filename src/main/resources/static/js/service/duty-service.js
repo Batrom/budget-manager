@@ -1,29 +1,33 @@
 angular.module('ngBudgetCalc')
-    .service('dutyService', function (dutyFactory, restService, event) {
+    .service('DutyService', function (DutyFactory, RestService, Event) {
         let duties = [];
 
         this.getDuties = function () {
             return duties;
         };
 
-        this.loadDuties = dutyFactory.getDuties(response => fetchLoadDutiesResponse(response));
-        this.saveDuty = dutyFactory.saveDuty(response => fetchSaveDutyResponse(response));
-        this.deleteDuty = dutyFactory.deleteDuty(response => fetchDeleteDutyResponse(response.data));
-        this.updateDuty = dutyFactory.updateDuty(response => fetchUpdateDutyResponse(response.data));
+        this.loadDuties = DutyFactory.getDuties(response => loadDutiesCallback(response));
+        this.saveDuty = DutyFactory.saveDuty(response => saveDutyCallback(response));
+        this.deleteDuty = DutyFactory.deleteDuty(response => deleteDutyCallback(response.data));
+        this.updateDuty = DutyFactory.updateDuty(response => updateDutyCallback(response.data));
 
-        let fetchLoadDutiesResponse = function (response) {
-            return restService.fetchData(() => duties = response.data, event.GET_DUTIES);
+        let loadDutiesCallback = function (response) {
+            return RestService.fetchData(() => duties = response.data, Event.DUTIES_CHANGED);
         };
 
-        let fetchSaveDutyResponse = function (response) {
-            return restService.fetchData(() => duties.push(response.data), event.GET_DUTIES);
+        let saveDutyCallback = function (response) {
+            return RestService.fetchData(() => duties.push(response.data), Event.DUTIES_CHANGED);
         };
 
-        let fetchDeleteDutyResponse = function (response) {
-            return restService.fetchData(() => duties = duties.filter(d => d.id !== response.data.id), event.GET_DUTIES);
+        let deleteDutyCallback = function (response) {
+            return RestService.fetchData(() => duties = duties.filter(d => d.id !== response.data), Event.DUTIES_CHANGED);
         };
 
-        let fetchUpdateDutyResponse = function (response) {
-            return restService.fetchData(() => duties = duties.map(duty => getRightIfEquals(duty, response.data)), event.GET_DUTIES);
+        let updateDutyCallback = function (response) {
+            return RestService.fetchData(() => duties = duties.map(duty => getRightIfEquals(duty, response.data)), Event.DUTIES_CHANGED);
         };
+
+        this.clearData = () => {
+            duties = [];
+        }
     });

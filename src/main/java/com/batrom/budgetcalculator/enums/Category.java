@@ -1,8 +1,7 @@
 package com.batrom.budgetcalculator.enums;
 
 import lombok.Getter;
-
-import java.util.Arrays;
+import org.apache.commons.lang3.StringUtils;
 
 public enum Category {
     NONE("Brak"),
@@ -19,10 +18,7 @@ public enum Category {
     }
 
     public static Category getByPolishName(final String polishName) {
-        return Arrays.stream(Category.values())
-                     .filter(c -> c.getPolishName().equals(polishName))
-                     .findAny()
-                     .orElse(null);
+        return StringUtils.isNotEmpty(polishName) ? Category.valueOf(polishName) : Category.NONE;
     }
 
     @Getter

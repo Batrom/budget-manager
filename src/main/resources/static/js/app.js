@@ -1,49 +1,36 @@
-angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular.filter', 'ngCookies', 'ui.calendar', 'ui.tree'])
-    .config(function ($routeProvider, $qProvider, products, $httpProvider) {
+angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular.filter', 'ngCookies', 'ui.calendar', 'ui.tree', 'ngDragDrop'])
+    .config(function ($routeProvider, $qProvider, $httpProvider) {
         $routeProvider
             .when('/login', {
                 templateUrl: 'view/login.html',
-                controller: 'loginController'
+                controller: 'LoginController'
             })
             .when('/home', {
                 templateUrl: 'view/home.html',
-                controller: 'homeController'
+                controller: 'HomeController'
             })
-            .when('/addProduct', {
-                templateUrl: 'view/addProduct.html',
-                controller: 'productController',
-                resolve: {
-                    productsType: () => products.TODAYS_MEMBER
-                }
+            .when('/product/new', {
+                templateUrl: 'view/new-product.html',
+                controller: 'NewProductController'
             })
-            .when('/myProducts', {
-                templateUrl: 'view/myProducts.html',
-                controller: 'productController',
-                resolve: {
-                    productsType: () => products.MEMBER
-                }
-            })
-            .when('/allProducts', {
-                templateUrl: 'view/allProducts.html',
-                controller: 'productController',
-                resolve: {
-                    productsType: () => products.ALL
-                }
+            .when('/product/list', {
+                templateUrl: 'view/product-list.html',
+                controller: 'ProductListController'
             })
             .when('/debts', {
                 templateUrl: 'view/debts.html',
-                controller: 'debtController'
+                controller: 'DebtController'
             })
             .when('/duties', {
                 templateUrl: 'view/duties.html'
             })
-            .when('/assignCategory', {
-                templateUrl: 'view/assignProductCategory.html',
+            .when('/product/category', {
+                templateUrl: 'view/assign-product-category.html',
                 controller: 'AssignProductCategoryController'
             })
             .when('/charts', {
-                templateUrl: 'view/charts.html',
-                controller: 'chartController'
+                templateUrl: 'view/chart.html',
+                controller: 'ChartController'
             })
             .otherwise({
                 redirectTo: '/login'
@@ -51,9 +38,9 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
         $qProvider.errorOnUnhandledRejections(false);
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     })
-    .run(function ($location, $rootScope, authenticationService) {
+    .run(function ($location, $rootScope, AuthenticationService, CleanupService) {
         $rootScope.$on("$routeChangeStart", function (event, next) {
-            authenticationService.authenticate().then(isAuthenticated => {
+            AuthenticationService.authenticate().then(isAuthenticated => {
                 if (isAuthenticated) {
                     if (next.$$route === undefined || next.$$route.originalPath === '/login') {
                         $location.path("/home");
@@ -65,6 +52,14 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
                     $location.path("/login");
                 }
             });
+
+            if (next.$$route !== undefined && next.$$route.originalPath === '/home') {
+                CleanupService.softClear();
+            }
+
+            if (next.$$route !== undefined && next.$$route.originalPath === '/login') {
+                CleanupService.hardClear();
+            }
         });
     })
     .directive('autofocus', [function () {

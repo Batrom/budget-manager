@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc')
-    .service('memberService', function ($cookies, $rootScope, event) {
+    .service('MemberService', function ($cookies, $rootScope, Event) {
         let parseJSON = () => {
             let stringJSON = $cookies.get('loggedMember');
             return stringJSON ? JSON.parse(stringJSON) : {name: ''};
@@ -14,6 +14,10 @@ angular.module('ngBudgetCalc')
             $cookies.put('loggedMember', JSON.stringify({
                 name: memberName
             }));
-            $rootScope.$emit(event.MEMBER_CHANGED);
+            $rootScope.$emit(Event.MEMBER_CHANGED);
+        };
+
+        this.clearData = () => {
+            this.remove();
         }
     });

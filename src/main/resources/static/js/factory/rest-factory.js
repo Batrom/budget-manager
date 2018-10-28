@@ -1,14 +1,14 @@
 angular.module('ngBudgetCalc')
-    .factory('restFactory', function ($http) {
+    .factory('RestFactory', function ($http) {
         function post(url) {
-            return (success, error = response => console.error(response)) => (data = {}) => {
-                $http.post(url, data).then(response => success(response), response => error(response));
+            return (successCallback, errorCallback = response => console.error(response)) => (data = {}) => {
+                $http.post(url, data).then(response => successCallback(response), response => errorCallback(response));
             }
         }
 
         function get(url) {
-            return (success, error = response => console.error(response)) => (data = '') => {
-                $http.get(url + data).then(response => success(response), response => error(response));
+            return (successCallback, errorCallback = response => console.error(response)) => (data = '') => {
+                $http.get(url + data).then(response => successCallback(response), response => errorCallback(response));
             }
         }
 

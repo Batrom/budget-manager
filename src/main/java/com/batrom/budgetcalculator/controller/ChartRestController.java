@@ -15,17 +15,17 @@ import java.util.List;
 @CommonsLog
 @RestController
 @RequestMapping("/chart")
-public class ChartController extends BaseRestController {
+public class ChartRestController extends BaseRestController {
 
     @GetMapping(value = "/getData")
     public ResponseEntity<List<DoughnutChartDTO>> getData(@RequestParam(name = "member") String member) {
-        return get(member, chartService::getData);
+        return execute(member, chartService::getData);
     }
 
     private final ChartService chartService;
 
     @Autowired
-    public ChartController(final ChartService chartService) {
+    public ChartRestController(final ChartService chartService) {
         this.chartService = chartService;
     }
 }

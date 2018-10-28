@@ -1,4 +1,4 @@
-angular.module('ngBudgetCalc').controller('homeController', function ($scope, initDataService, memberService, $http, $rootScope, $location) {
-    $scope.innerLogIn = memberName => memberService.setMember(memberName);
-    initDataService.loadInitData();
+angular.module('ngBudgetCalc').controller('HomeController', function ($scope, CommonDataService, MemberService) {
+    $scope.innerLogIn = memberName => MemberService.setMember(memberName);
+    CommonDataService.loadCommonData();
 });

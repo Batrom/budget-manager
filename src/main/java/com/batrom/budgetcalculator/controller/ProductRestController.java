@@ -3,20 +3,20 @@ package com.batrom.budgetcalculator.controller;
 import com.batrom.budgetcalculator.dto.ProductDTO;
 import com.batrom.budgetcalculator.service.ProductService;
 import lombok.extern.apachecommons.CommonsLog;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @CommonsLog
 @RestController
 @RequestMapping("/product")
-public class ProductController extends BaseRestController {
+public class ProductRestController extends BaseRestController {
 
     @GetMapping(value = "/getAll")
     public ResponseEntity<List<ProductDTO>> getAll() {
-        return get(productService::findAll);
+        return get(productService::findProductsForView);
     }
 
     @PostMapping(value = "/save")
@@ -25,7 +25,7 @@ public class ProductController extends BaseRestController {
     }
 
     @PostMapping(value = "/delete")
-    public ResponseEntity<ProductDTO> delete(@RequestBody ProductDTO productDTO) {
+    public ResponseEntity<Long> delete(@RequestBody ProductDTO productDTO) {
         return execute(productDTO, productService::delete);
     }
 
@@ -34,10 +34,14 @@ public class ProductController extends BaseRestController {
         return execute(productDTO, productService::update);
     }
 
-    private final ProductService productService;
+    @PostMapping(value = "/updateCategory")
+    public ResponseEntity<List<ProductDTO>> updateCategory(@RequestBody Map<String, List<ProductDTO>> productsByCategoryMap) {
+        return execute(productsByCategoryMap, productService::updateCategory);
+    }
 
-    @Autowired
-    public ProductController(final ProductService productService) {
+    public ProductRestController(final ProductService productService) {
         this.productService = productService;
     }
+
+    private final ProductService productService;
 }

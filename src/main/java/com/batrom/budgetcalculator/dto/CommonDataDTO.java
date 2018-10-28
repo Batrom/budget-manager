@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @ToString
-public class InitDataDTO {
+public class CommonDataDTO {
     private List<String> memberGroups;
     private List<CategoryDTO> productCategories;
 }

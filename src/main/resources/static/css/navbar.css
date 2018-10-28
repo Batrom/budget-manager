@@ -1,0 +1,9 @@
+.navbar {
+    border-radius: 0;
+}
+
+.btn-logout {
+    margin-right: 15px;
+    border-left: 1px solid var(--bc-darkest-color);
+    border-right: 1px solid var(--bc-darkest-color);
+}

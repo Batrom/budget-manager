@@ -1,14 +1,8 @@
-angular.module('ngBudgetCalc').controller('chartController', function ($scope, chartService, restService, event, memberService) {
-    $scope.chartData = [{ labels: [''], values: []}];
+angular.module('ngBudgetCalc').controller('ChartController', function ($scope, ChartService, Event, MemberService, EventService) {
+    $scope.chartData = [{labels: [''], values: []}];
     $scope.selectedData = $scope.chartData[0];
 
     $scope.getSelectSize = () => $scope.chartData.length !== 0 ? $scope.chartData.length : 1;
-
-    restService.on(event.GET_CHART_DATA, () => {
-        $scope.chartData = chartService.getData();
-        $scope.selectedData = $scope.chartData[0];
-        $scope.updateChart();
-    });
 
     let myChart = new Chart(angular.element(document.querySelector('#chart'))[0], {
         type: 'doughnut',
@@ -49,11 +43,21 @@ angular.module('ngBudgetCalc').controller('chartController', function ($scope, c
         }
     });
 
+    EventService.addListener(Event.CHART_DATA_CHANGED, $scope, () => {
+        $scope.chartData = ChartService.getData();
+        $scope.selectedData = $scope.chartData[0];
+        $scope.updateChart();
+    });
+
+    EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
+        ChartService.loadChartData(MemberService.getMember().name);
+    });
+
     $scope.updateChart = function () {
         myChart.data.labels = $scope.selectedData.labels;
         myChart.data.datasets[0].data = $scope.selectedData.values;
         myChart.update();
     };
 
-    (() => chartService.loadChartData(memberService.getMember().name))();
+    ChartService.loadChartData(MemberService.getMember().name);
 });

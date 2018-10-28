@@ -1,10 +1,10 @@
 angular.module('ngBudgetCalc')
-    .controller('updateProductModalController', function($scope, product, memberGroups, productService, debtService, $uibModalInstance) {
+    .controller('UpdateProductModalController', function($scope, product, memberGroups, ProductService, DebtService, $uibModalInstance) {
         $scope.product = angular.copy(product);
         $scope.memberGroups = memberGroups;
 
         $scope.saveChanges = function () {
-            productService.updateProduct($scope.product);
+            ProductService.updateProduct($scope.product);
             $uibModalInstance.close($scope.product);
         };
 

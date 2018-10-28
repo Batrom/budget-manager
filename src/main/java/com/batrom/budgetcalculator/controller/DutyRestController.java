@@ -13,7 +13,7 @@ import java.util.List;
 @CommonsLog
 @RestController
 @RequestMapping("/duty")
-public class DutyController extends BaseRestController {
+public class DutyRestController extends BaseRestController {
 
     @GetMapping(value = "/getAll")
     public ResponseEntity<List<DutyDTO>> getAll() {
@@ -26,7 +26,7 @@ public class DutyController extends BaseRestController {
     }
 
     @PostMapping(value = "/delete")
-    public ResponseEntity<DutyDTO> delete(@RequestBody final DutyDTO dutyDTO) {
+    public ResponseEntity<Long> delete(@RequestBody final DutyDTO dutyDTO) {
         return execute(dutyDTO, dutyService::delete);
     }
 
@@ -38,7 +38,7 @@ public class DutyController extends BaseRestController {
     private final DutyService dutyService;
 
     @Autowired
-    public DutyController(final DutyService dutyService) {
+    public DutyRestController(final DutyService dutyService) {
         this.dutyService = dutyService;
     }
 }

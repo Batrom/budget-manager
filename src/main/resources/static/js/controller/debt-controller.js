@@ -1,7 +1,10 @@
-angular.module('ngBudgetCalc').controller('debtController', function ($scope, memberService, debtService, event, $rootScope) {
-    $scope.debts = [];
-    $scope.getDebtText = debt => debtService.getDebtText(debt);
+angular.module('ngBudgetCalc').controller('DebtController', function ($scope, MemberService, DebtService, Event, EventService, $sce) {
+    $scope.debts = DebtService.getDebts();
+    $scope.getDebtText = debt => $sce.trustAsHtml(DebtService.getDebtText(debt));
 
-    $rootScope.$on(event.GET_DEBTS, () => $scope.debts = debtService.getDebts());
-    debtService.loadDebts(memberService.getMember().name);
+    executeIfEmpty($scope.products, () => DebtService.loadDebts(MemberService.getMember().name));
+
+    EventService.addListener(Event.DEBTS_CHANGED, $scope, () => {
+        $scope.debts = DebtService.getDebts();
+    })
 });

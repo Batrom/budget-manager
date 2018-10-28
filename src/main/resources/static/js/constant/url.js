@@ -1,5 +1,5 @@
 angular.module('ngBudgetCalc').constant('url', {
-        getInitData: '/resource/getData',
+        getCommonData: '/common/getData',
 
         getDebts: '/debt/getAll?member=',
 
@@ -14,8 +14,6 @@ angular.module('ngBudgetCalc').constant('url', {
         saveProduct: '/product/save',
         updateProduct: '/product/update',
         deleteProduct: '/product/delete',
-
-        updateProductsCategory: '/productsByCategory/updateAll',
-        getProductsByCategory: '/productsByCategory/getAll?member='
+        updateProductsCategory: '/product/updateCategory',
     }
 );

@@ -4,7 +4,6 @@ import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -17,17 +16,16 @@ public abstract class BaseRestController {
             return new ResponseEntity<>(supplier.get(), HttpStatus.OK);
         } catch (final Exception e) {
             log.error("Problem occurred in REST request", e);
-            return new ResponseEntity<>((T) null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    protected <T, R> ResponseEntity<R> get(final T input, final Function<T, R> mapper/*, BaseValidator<T> validator*/) {
+    protected <T, R> ResponseEntity<R> execute(final T input, final Function<T, R> function) {
         try {
-//            validator.validate(input);
-            return new ResponseEntity<>(mapper.apply(input), HttpStatus.OK);
+            return new ResponseEntity<>(function.apply(input), HttpStatus.OK);
         } catch (final Exception e) {
             log.error("Problem occurred in REST request", e);
-            return new ResponseEntity<>((R) null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -36,17 +34,7 @@ public abstract class BaseRestController {
             return new ResponseEntity<>(operator.apply(input), HttpStatus.OK);
         } catch (final Exception e) {
             log.error("Problem occurred in REST request", e);
-            return new ResponseEntity<>(input, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    protected <T> ResponseEntity<T> execute(final T input, final Consumer<T> consumer) {
-        try {
-            consumer.accept(input);
-            return new ResponseEntity<>(input, HttpStatus.OK);
-        } catch (final Exception e) {
-            log.error("Problem occurred in REST request", e);
-            return new ResponseEntity<>(input, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

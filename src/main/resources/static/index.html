@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="This is budget app">
     <meta name="author" content="Bartosz Romanowski">
 
     <title>Budget calculator</title>
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" type="text/javascript">
     </script>
@@ -25,8 +26,11 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
 
     <script src="https://use.fontawesome.com/9db34014b9.js"></script>
-    <script type="text/javascript" src="bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script type="text/javascript" src="js/date-fns.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script type="text/javascript"
@@ -40,24 +44,31 @@
     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.min.js"></script>-->
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,500,700,900&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.print.min.css"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tree/2.22.6/angular-ui-tree.min.css"/>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
-    <!--<link href="css/calendar.css" rel="stylesheet">-->
-    <link href="css/tree.css" rel="stylesheet">
+    <link href="css/assign-product-category.css" rel="stylesheet">
     <link href="css/chart.css" rel="stylesheet">
+    <link href="css/debt.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
 </head>
 
 <body data-ng-app="ngBudgetCalc" data-ng-cloak>
-<div data-ng-controller="mainController">
+<div data-ng-controller="MainController">
     <div data-ng-include="'view/navbar.html'"></div>
     <div class="container" data-ng-view></div>
 </div>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/angular-drag-drop.min.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/controller/main-controller.js"></script>
@@ -67,13 +78,14 @@
 <script src="js/controller/debt-controller.js"></script>
 <script src="js/controller/home-controller.js"></script>
 <script src="js/controller/nav-controller.js"></script>
-<script src="js/controller/product-controller.js"></script>
+<script src="js/controller/new-product-controller.js"></script>
+<script src="js/controller/product-list-controller.js"></script>
 <script src="js/controller/update-product-modal-controller.js"></script>
 
 <script src="js/factory/chart-factory.js"></script>
 <script src="js/factory/debt-factory.js"></script>
 <script src="js/factory/duty-factory.js"></script>
-<script src="js/factory/init-data-factory.js"></script>
+<script src="js/factory/common-data-factory.js"></script>
 <script src="js/factory/product-factory.js"></script>
 <script src="js/factory/rest-factory.js"></script>
 
@@ -81,13 +93,14 @@
 <script src="js/service/chart-service.js"></script>
 <script src="js/service/debt-service.js"></script>
 <script src="js/service/duty-service.js"></script>
-<script src="js/service/init-data-service.js"></script>
+<script src="js/service/common-data-service.js"></script>
 <script src="js/service/product-service.js"></script>
 <script src="js/service/rest-service.js"></script>
 <script src="js/service/member-service.js"></script>
+<script src="js/service/event-service.js"></script>
+<script src="js/service/cleanup-service.js"></script>
 
 <script src="js/constant/event.js"></script>
-<script src="js/constant/products.js"></script>
 <script src="js/constant/url.js"></script>
 </body>
 </html>

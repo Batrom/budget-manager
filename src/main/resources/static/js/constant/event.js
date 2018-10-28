@@ -1,10 +1,9 @@
-angular.module('ngBudgetCalc').constant('event', {
+angular.module('ngBudgetCalc').constant('Event', {
         PRODUCTS_CHANGED: 'productsChanged',
-        GET_PRODUCTS_BY_CATEGORY: 'getProductsByCategory',
-        GET_DEBTS: 'getDebts',
-        GET_DUTIES: 'getDuties',
-        GET_CHART_DATA: 'getChartData',
-        GET_INIT_DATA: 'getInitData',
+        DEBTS_CHANGED: 'debtsChanged',
+        DUTIES_CHANGED: 'dutiesChanged',
+        CHART_DATA_CHANGED: 'chartDataChanged',
+        COMMON_DATA_CHANGED: 'commonDataChanged',
         MEMBER_CHANGED: 'memberChanged'
     }
 );

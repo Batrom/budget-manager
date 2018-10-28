@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @RestController
-public class AuthenticationController {
+public class AuthenticationRestController {
 
     @GetMapping("/user")
     public Principal user(Principal user) {
