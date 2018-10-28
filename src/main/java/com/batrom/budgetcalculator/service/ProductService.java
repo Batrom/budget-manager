@@ -24,7 +24,7 @@ import static java.util.stream.Collectors.toList;
 public class ProductService {
 
     public List<ProductDTO> findProductsForView() {
-        return productRepository.findProductsByCreationDateGreaterThanEqualOrCategoryEquals(DateUtils.getSixtyDaysAgo(), Category.NONE)
+         return productRepository.findProductsByCreationDateGreaterThanEqualOrCategoryEquals(DateUtils.getSixtyDaysAgo(), Category.NONE)
                                 .stream()
                                 .map(this::entityToDTO)
                                 .collect(Collectors.toList());
@@ -58,24 +58,6 @@ public class ProductService {
                                     .flatMap(List::stream)
                                     .collect(toList());
     }
-
-/*
-    public List<ProductDTO> updateCategory(final Map<String, List<ProductDTO>> productsByCategoryMap) {
-        return productRepository.saveAll(productsByCategoryMap.entrySet()
-                                                              .stream()
-                                                              .map(entry -> entry.getValue()
-                                                                                 .stream()
-                                                                                 .map(productDTO -> {
-                                                                                     productDTO.setCategory(entry.getKey());
-                                                                                     return dtoToEntity(productDTO);
-                                                                                 })
-                                                                                 .collect(toList()))
-                                                              .flatMap(List::stream)
-                                                              .collect(toList()))
-                                .stream()
-                                .map(this::entityToDTO)
-                                .collect(toList());
-    }*/
 
     public Long delete(final ProductDTO dto) {
         productRepository.deleteById(dto.getId());

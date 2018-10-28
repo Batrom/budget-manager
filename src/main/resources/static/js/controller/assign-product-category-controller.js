@@ -28,7 +28,7 @@ angular.module('ngBudgetCalc').controller('AssignProductCategoryController', fun
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
         $scope.productsByCategory = ProductService.getProductsByCategory();
-        $route.reload();
+        if (isNotEmpty($scope.productsByCategory)) $route.reload();
     });
 
     EventService.addListener(Event.COMMON_DATA_CHANGED, $scope, () => {

@@ -1,14 +1,16 @@
 <div class="login-wrapper">
     <form role="form" ng-submit="logIn()">
-        <div class="form-group">
+        <div class="form-group" data-ng-class="{'has-error': !isLoginCorrect}">
             <input type="text" class="form-control" id="username" name="username"
                    ng-model="credentials.username"
-                   placeholder="Login"/>
+                   placeholder="Login" data-ng-focus="isLoginCorrect=true"/>
+            <span data-ng-hide="isLoginCorrect" class="glyphicon glyphicon-remove form-control-feedback form-control-login"></span>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-ng-class="{'has-error': !isPasswordCorrect}">
             <input type="password" class="form-control" id="password" name="password"
                    ng-model="credentials.password"
-                   placeholder="Hasło"/>
+                   placeholder="Hasło" data-ng-focus="isPasswordCorrect=true"/>
+            <span data-ng-hide="isPasswordCorrect" class="glyphicon glyphicon-remove form-control-feedback form-control-password"></span>
         </div>
         <div class="btn-login">
             <button type="submit" class="btn btn-primary">Zaloguj</button>

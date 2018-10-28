@@ -22,9 +22,9 @@ angular.module('ngBudgetCalc')
         this.getDebtText = function (debt) {
             let formattedDebt = Number(Math.abs(debt.debt)).toFixed(2).toString().replace('.', ',') + ' zł';
             if (debt.debt > 0) {
-                return 'Masz do oddania ' + formattedDebt + ' użytkownikowi ' + debt.otherMember;
+                return 'Masz do oddania <b>' + formattedDebt + '</b> użytkownikowi <b>' + debt.otherMember + '</b>';
             } else if (debt.debt < 0) {
-                return 'Użytkownik ' + debt.otherMember + ' powinien Ci oddać <b>' + formattedDebt + '</b>';
+                return 'Użytkownik <b>' + debt.otherMember + '</b> powinien Ci oddać <b>' + formattedDebt + '</b>';
             }
         };
 

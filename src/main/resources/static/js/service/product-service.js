@@ -37,8 +37,7 @@ angular.module('ngBudgetCalc')
         this.getAllProducts = () => products;
         this.getTodaysMemberProducts = () => products.filter(prod => prod.creditor === MemberService.getMember().name && prod.creationDate === today);
         this.getProductsByCategory = () => {
-            const memberName = MemberService.getMember().name;
-            let productsByCategory = products.filter(prod => prod.creditor === memberName).groupBy('category');
+            let productsByCategory = products.groupBy('category');
             CommonDataService.getProductsCategories().map(cat => cat.name).forEach(cat => {
                 if (productsByCategory[cat] === undefined) {
                     productsByCategory[cat] = [];

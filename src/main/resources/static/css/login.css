@@ -34,7 +34,27 @@ div.btn-login button.btn.btn-primary {
     font-size: 16px;
 }
 
+.form-control-login {
+    top: 39px;
+    right: 35px;
+}
+
+.form-control-password {
+    top: 99px;
+    right: 35px;
+}
+
 @media (min-width: 576px) {
+    .form-control-login {
+        top: 59px;
+        right: 60px;
+    }
+
+    .form-control-password {
+        top: 119px;
+        right: 60px;
+    }
+
     .login-wrapper {
         width: 500px;
         padding: 50px;
