@@ -23,10 +23,10 @@ public class Product {
 
     private LocalDate creationDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private User creditor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private UserGroup debtorsGroup;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)

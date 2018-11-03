@@ -3,7 +3,6 @@ package com.batrom.budgetcalculator.service;
 import com.batrom.budgetcalculator.model.Debt;
 import com.batrom.budgetcalculator.model.Product;
 import com.batrom.budgetcalculator.model.ProductDTO;
-import com.batrom.budgetcalculator.model.User;
 import com.batrom.budgetcalculator.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
