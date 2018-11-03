@@ -1,0 +1,488 @@
+11;pistacje;10.88;Rafał;Wszyscy;2017-12-01
+12;papier toaletowy 16 rolek;7.98;Rafał;Wszyscy;2017-12-01
+13;ręcznik kuchenny;4.99;Rafał;Wszyscy;2017-12-01
+14;chleb i bułki;4.60;Rafał;Wszyscy;2017-12-01
+15;zakupy lidl i fresh;114.75;Rafał;Aga i Rafał;2017-12-01
+20;zakupy fresh;24.16;Rafał;Aga i Rafał;2017-12-01
+21;kurtka, skarpetki, dodatek do prania kurtki;434.17;Rafał;Aga i Rafał;2017-12-02
+22;kawa;39.00;Rafał;Wszyscy;2017-12-02
+23;papryczki i sałatka;10.00;Rafał;Aga i Rafał;2017-12-02
+24;kanapka i lody;14.45;Aga;Aga i Rafał;2017-12-02
+27;zakupy fresh;23.00;Aga;Aga i Rafał;2017-12-02
+28;zakupy lidl;21.24;Rafał;Aga i Rafał;2017-12-04
+29;prezent Aga;190.75;Rafał;Aga i Rafał;2017-12-07
+30;kolacja mikołajkowa;81.00;Rafał;Aga i Rafał;2017-12-07
+31;kfc;5.45;Rafał;Aga i Rafał;2017-12-07
+32;prezent koleżanka Agi;55.00;Rafał;Aga i Rafał;2017-12-07
+33;paliwo;59.91;Rafał;Aga i Rafał;2017-12-07
+34;łańcuchy;72.60;Rafał;Wszyscy;2017-12-07
+35;chleb;3.10;Bartek;Wszyscy;2017-12-14
+36;bułki;2.34;Bartek;Wszyscy;2017-12-14
+37;piwo marynka mikołajki;37.00;Rafał;Aga i Rafał;2017-12-15
+38;pizza mikołajki;44.00;Rafał;Aga i Rafał;2017-12-15
+39;prezent Aga mikołajki;190.75;Rafał;Aga i Rafał;2017-12-15
+40;jedzenie korona dla Agi;15.44;Rafał;Aga i Rafał;2017-12-15
+41;fresh zakupy;6.98;Rafał;Aga i Rafał;2017-12-15
+42;fresh zakupy;7.99;Rafał;Aga i Rafał;2017-12-15
+43;kanapka praca;5.50;Rafał;Aga i Rafał;2017-12-15
+44;fresh zakupy;8.98;Rafał;Aga i Rafał;2017-12-15
+45;rata telefon;120.38;Rafał;Aga i Rafał;2017-12-15
+46;paliwo;99.48;Rafał;Wszyscy;2017-12-15
+47;kaufland zakupy Wieluń;64.95;Rafał;Aga i Rafał;2017-12-15
+48;kanalizacja i płaszcz mama;400.00;Rafał;Aga i Rafał;2017-12-15
+49;chleb WIELUŃ;6.24;Rafał;Aga i Rafał;2017-12-15
+50;czynsz i rachunki;800.00;Rafał;Aga i Rafał;2017-12-15
+51;zakupy lidl;70.63;Rafał;Aga i Rafał;2017-12-15
+52;kfc;10.90;Rafał;Aga i Rafał;2017-12-15
+53;bluzka dla Agi;60.00;Rafał;Aga i Rafał;2017-12-15
+54;opakowania prezentowe;15.80;Rafał;Aga i Rafał;2017-12-15
+55;paliwo orlen;69.90;Rafał;Aga i Rafał;2017-12-15
+56;ikea;101.02;Rafał;Aga i Rafał;2017-12-15
+57;fresh zakupy;8.84;Rafał;Aga i Rafał;2017-12-15
+58;jedzenie praca;6.00;Rafał;Aga i Rafał;2017-12-15
+59;koperta praca;3.60;Rafał;Aga i Rafał;2017-12-15
+60;lidl zakupy;39.89;Rafał;Aga i Rafał;2017-12-15
+61;masła 2 razy z Lidla;20.00;Rafał;Wszyscy;2017-12-15
+62;piwo;6.68;Aga;Aga i Rafał;2017-12-15
+63;Freshmarket;14.96;Aga;Aga i Rafał;2017-12-15
+64;Freshmarket;9.07;Aga;Aga i Rafał;2017-12-15
+65;Obiad Ikea;43.95;Aga;Aga i Rafał;2017-12-15
+66;Czynsz;800.00;Aga;Aga i Rafał;2017-12-15
+67;Biedra;19.44;Aga;Aga i Rafał;2017-12-15
+68;Freshmarkt;16.46;Aga;Aga i Rafał;2017-12-15
+69;Kabel;39.90;Aga;Aga i Rafał;2017-12-15
+70;Jysk;110.20;Aga;Aga i Rafał;2017-12-15
+71;Freshmarket;15.43;Aga;Aga i Rafał;2017-12-15
+72;Zdjecia;16.80;Aga;Aga i Rafał;2017-12-15
+73;Lego;149.00;Aga;Aga i Rafał;2017-12-15
+74;Dotpay-koszula;49.99;Aga;Aga i Rafał;2017-12-15
+75;skrzyneczki na zdjęcia;106.00;Aga;Aga i Rafał;2017-12-15
+76;Carry;50.00;Aga;Aga i Rafał;2017-12-15
+77;Rossmann;45.45;Aga;Aga i Rafał;2017-12-15
+78;sawara kebab;49.00;Aga;Aga i Rafał;2017-12-15
+79;Freshmarket;22.56;Aga;Aga i Rafał;2017-12-15
+80;bułki;4.00;Bartek;Wszyscy;2017-12-22
+83;chleb, banany, ser żółty;10.00;Aga;Wszyscy;2018-01-04
+84;domowe obiady;30.00;Aga;Aga i Rafał;2018-01-04
+85;Netflix;13.00;Bartek;Wszyscy;2018-01-06
+86;mleko;3.00;Aga;Wszyscy;2018-01-09
+87;banany;4.40;Bartek;Wszyscy;2018-01-11
+88;bułki;2.34;Bartek;Wszyscy;2018-01-11
+89;masło x 2;20.00;Rafał;Wszyscy;2018-01-13
+90;szynka x 2;12.00;Rafał;Wszyscy;2018-01-13
+91;pieczywo;10.00;Rafał;Wszyscy;2018-01-13
+92;bulkix6;3.54;Bartek;Wszyscy;2018-01-16
+93;ser;3.49;Bartek;Wszyscy;2018-01-16
+94;chleb tostowy x2, banany;11.00;Aga;Wszyscy;2018-01-18
+95;masło, ser żółty;10.00;Aga;Wszyscy;2018-01-22
+96;maść + 2 op. leków dla babci;30.00;Aga;Wszyscy;2018-01-22
+97;telefon nju;38.34;Rafał;Aga i Rafał;2018-01-22
+98;mama leki babcia;50.00;Rafał;Wszyscy;2018-01-22
+99;paliwo;70.00;Rafał;Wszyscy;2018-01-22
+100;siłowniki klapa focus;42.00;Rafał;Wszyscy;2018-01-22
+101;prezent Aga;130.00;Rafał;Aga i Rafał;2018-01-22
+102;paliwo;80.00;Rafał;Wszyscy;2018-01-22
+103;biedronka;68.00;Rafał;Aga i Rafał;2018-01-22
+104;fresh;29.00;Rafał;Aga i Rafał;2018-01-22
+105;prezeny Sidor;100.00;Rafał;Aga i Rafał;2018-01-22
+106;paliwo;80.00;Rafał;Aga i Rafał;2018-01-22
+107;pizza;51.00;Rafał;Aga i Rafał;2018-01-22
+108;auchan;52.00;Rafał;Aga i Rafał;2018-01-22
+109;lidl;25.00;Rafał;Aga i Rafał;2018-01-22
+110;lidl;75.00;Rafał;Aga i Rafał;2018-01-22
+111;paliwo;80.00;Rafał;Aga i Rafał;2018-01-22
+112;piłeczki decathlon;28.00;Rafał;Aga i Rafał;2018-01-22
+113;tesco;37.00;Rafał;Aga i Rafał;2018-01-22
+114;gresh;16.00;Rafał;Aga i Rafał;2018-01-22
+115;kfc;29.00;Rafał;Aga i Rafał;2018-01-22
+116;banany, bułki, chleb;11.00;Aga;Wszyscy;2018-01-23
+117;piwo;5.00;Aga;Aga i Rafał;2018-01-23
+118;zakupy biedra;40.00;Aga;Aga i Rafał;2018-01-23
+119;burito w pracy;25.00;Bartek;Bartek;2018-02-07
+120;chaczapuri;8.00;Bartek;Bartek;2018-02-07
+121;obiad w pracy;7.50;Bartek;Bartek;2018-02-07
+122;kawa w pracy;1.20;Bartek;Bartek;2018-02-07
+123;precel w pracy;5.00;Bartek;Bartek;2018-02-07
+124;paliwo;60.04;Bartek;Wszyscy;2018-02-07
+125;obiad w pracy;8.50;Bartek;Bartek;2018-02-07
+126;obiad w pracy;7.50;Bartek;Bartek;2018-02-07
+127;chaczapuri;8.00;Bartek;Bartek;2018-02-07
+128;fryzjer;40.00;Bartek;Bartek;2018-02-08
+129;obiad w pracy;13.50;Bartek;Bartek;2018-02-08
+130;Bułki, banany, mleko, ser;15.00;Aga;Wszyscy;2018-02-08
+133;chaczapuri;8.00;Bartek;Bartek;2018-02-10
+134;chleb tostowy;2.99;Bartek;Bartek;2018-02-10
+135;piwo;3.99;Bartek;Bartek;2018-02-10
+136;Netflix;13.00;Bartek;Wszyscy;2018-02-10
+137;nc+;20.65;Bartek;Bartek;2018-02-10
+138;kredyt telefon;39.97;Bartek;Bartek;2018-02-10
+139;Zakupy obiad;23.01;Bartek;Bartek;2018-02-11
+140;bułki i majonez;11.25;Bartek;Wszyscy;2018-02-12
+141;obiad w pracy;7.50;Bartek;Bartek;2018-02-12
+142;bilet tramwajowy;2.40;Bartek;Bartek;2018-02-14
+143;burger;6.00;Bartek;Bartek;2018-02-14
+144;obiad w pracy;7.50;Bartek;Bartek;2018-02-14
+145;banany;6.37;Bartek;Wszyscy;2018-02-14
+146;filet z kurczaka;7.95;Bartek;Wszyscy;2018-02-14
+147;papryka;2.75;Bartek;Bartek;2018-02-14
+148;cebula;0.70;Bartek;Bartek;2018-02-14
+149;reklamówka;0.44;Bartek;Bartek;2018-02-14
+150;piwo, jogurt i pieczarki;9.97;Bartek;Bartek;2018-02-14
+151;telefony i internet;124.00;Bartek;Bartek;2018-02-14
+152;Naboje do pióra;27.00;Bartek;Aga i Rafał;2018-02-15
+153;lidl wspólne jedzenie+chemia;65.00;Rafał;Wszyscy;2018-02-15
+154;lidl;55.00;Rafał;Aga i Rafał;2018-02-15
+155;paliwo;100.00;Rafał;Wszyscy;2018-02-15
+156;chleb, bułki;8.00;Aga;Wszyscy;2018-02-15
+157;bilet miesięczny;60.00;Bartek;Bartek;2018-02-17
+158;obiad w pracy;9.50;Bartek;Bartek;2018-02-17
+159;burger;6.00;Bartek;Bartek;2018-02-17
+160;prezent dla mamy;100.00;Bartek;Bartek;2018-02-21
+161;gazeta;1.99;Bartek;Bartek;2018-02-21
+162;burger;7.50;Bartek;Bartek;2018-02-21
+163;obiad w pracy;8.50;Bartek;Bartek;2018-02-21
+164;chaczapuri;8.00;Bartek;Bartek;2018-02-21
+165;pizza w pracy;18.68;Bartek;Bartek;2018-02-23
+166;obiad w pracy;15.00;Bartek;Bartek;2018-02-23
+167;bułki;5.00;Aga;Wszyscy;2018-02-24
+168;paliwo;70.00;Rafał;Wszyscy;2018-02-24
+169;pasaż;26.00;Rafał;Aga i Rafał;2018-02-24
+170;jedzenie;18.70;Rafał;Aga i Rafał;2018-02-24
+171;telefon nju;38.50;Rafał;Aga i Rafał;2018-02-24
+172;makaron;5.00;Rafał;Wszyscy;2018-02-24
+173;zakupy fresh;16.00;Rafał;Aga i Rafał;2018-02-24
+174;zakupy lidl;30.00;Rafał;Wszyscy;2018-02-24
+175;zakupy lidl;90.00;Rafał;Aga i Rafał;2018-02-24
+176;zakupy fresh;15.04;Rafał;Aga i Rafał;2018-02-24
+177;zakupy fresh;15.00;Rafał;Aga i Rafał;2018-02-24
+178;biedronka;23.00;Rafał;Aga i Rafał;2018-02-24
+179;szynka;7.40;Aga;Wszyscy;2018-02-24
+180;mięso;27.70;Aga;Aga i Rafał;2018-02-24
+181;kawa;51.00;Aga;Wszyscy;2018-02-24
+182;banany;5.00;Rafał;Wszyscy;2018-02-24
+183;chleb;3.70;Rafał;Wszyscy;2018-02-24
+184;ser salami;6.00;Rafał;Wszyscy;2018-02-24
+185;zakupy biedronka;25.00;Rafał;Aga i Rafał;2018-02-24
+186;zakupy kuchnie świata;25.00;Rafał;Aga i Rafał;2018-02-24
+187;chusteczki do prania;7.00;Aga;Wszyscy;2018-02-24
+188;zakupy rossman;28.00;Aga;Aga i Rafał;2018-02-24
+189;chleb tostowy;3.00;Bartek;Wszyscy;2018-02-24
+190;ser;3.50;Bartek;Wszyscy;2018-02-24
+191;mleko;3.00;Bartek;Wszyscy;2018-02-24
+192;bulki z dynia;2.67;Bartek;Bartek;2018-02-24
+193;danie oyakata;3.69;Bartek;Bartek;2018-02-24
+194;mięso lidl udka;12.00;Rafał;Wszyscy;2018-02-27
+195;woda zgrzewka;3.54;Rafał;Wszyscy;2018-02-27
+196;banany lidl;4.49;Rafał;Wszyscy;2018-02-27
+197;zakupy lidl Bartek;13.86;Rafał;Bartek;2018-02-27
+198;bułki i masło;9.83;Rafał;Wszyscy;2018-02-27
+199;zakupy lidl;31.70;Rafał;Aga i Rafał;2018-02-27
+200;obiad w pracy;15.00;Bartek;Bartek;2018-02-28
+201;zakupy fresh;15.83;Bartek;Bartek;2018-02-28
+202;obiad w pracy;14.00;Bartek;Bartek;2018-02-28
+203;chaczapuri;8.00;Bartek;Bartek;2018-02-28
+204;obiad w pracy;13.00;Bartek;Bartek;2018-02-28
+205;obiad w pracy;15.00;Bartek;Bartek;2018-02-28
+206;paliwo;100.00;Rafał;Bartek;2018-03-02
+207;precel;5.00;Bartek;Bartek;2018-03-03
+208;sprężone powietrze;15.99;Bartek;Bartek;2018-03-03
+209;dyski SSD;630.00;Bartek;Bartek;2018-03-07
+210;prezent dla Kuby;17.27;Bartek;Bartek;2018-03-07
+211;woda;1.49;Bartek;Bartek;2018-03-07
+212;gazeta motor;1.99;Bartek;Bartek;2018-03-07
+213;batonik;1.40;Bartek;Bartek;2018-03-07
+214;pizza;19.00;Bartek;Bartek;2018-03-07
+215;pasta termoprzewodząca i kabel sata;34.00;Bartek;Bartek;2018-03-07
+216;piwo na kręglach;7.00;Bartek;Aga i Rafał;2018-03-07
+217;piwo na kręglach;7.00;Bartek;Bartek;2018-03-07
+218;obiad w pracy;9.00;Bartek;Bartek;2018-03-07
+219;precel;5.00;Bartek;Bartek;2018-03-07
+220;paliwo;100.00;Rafał;Aga i Rafał;2018-03-10
+221;zakupy lidl dla wszystkich;89.28;Rafał;Wszyscy;2018-03-10
+222;zakupy lidl;62.49;Rafał;Aga i Rafał;2018-03-10
+223;piwo;4.00;Rafał;Bartek;2018-03-10
+224;piwo;4.00;Rafał;Aga i Rafał;2018-03-10
+225;zakupy lidl;124.54;Rafał;Aga i Rafał;2018-03-10
+226;jedzenie;24.00;Rafał;Aga i Rafał;2018-03-10
+227;obiad w pracy;19.00;Bartek;Bartek;2018-03-11
+228;precel;5.00;Bartek;Bartek;2018-03-11
+229;przyrząd do pompek;29.30;Bartek;Bartek;2018-03-11
+230;ser żółty;4.75;Bartek;Wszyscy;2018-03-11
+231;bułki;2.34;Bartek;Bartek;2018-03-11
+232;kabanosy;3.99;Bartek;Bartek;2018-03-11
+233;herbata yerba;3.95;Bartek;Bartek;2018-03-11
+234;pieczarki;3.99;Bartek;Bartek;2018-03-11
+235;śniadanie w pracy;5.00;Bartek;Bartek;2018-03-11
+236;netflix;13.00;Bartek;Wszyscy;2018-03-11
+237;kredyt za telefon;39.97;Bartek;Bartek;2018-03-11
+238;piwo;12.00;Bartek;Bartek;2018-03-11
+239;paliwo;120.00;Rafał;Wszyscy;2018-03-18
+240;dzień kobiet w pracy;7.75;Bartek;Bartek;2018-03-24
+241;spotkanie firmowe;54.00;Bartek;Bartek;2018-03-24
+242;obiad u chińczyka;14.50;Bartek;Bartek;2018-03-24
+243;zakupy freshmarket;25.24;Bartek;Bartek;2018-03-24
+244;zakupy freshmarket;18.98;Bartek;Bartek;2018-03-24
+245;chaczapuri;8.00;Bartek;Bartek;2018-03-24
+246;zapomoga dla mamy;300.00;Bartek;Bartek;2018-03-24
+247;wymiana oleju;50.00;Bartek;Bartek;2018-03-24
+248;telefony i internet;124.00;Bartek;Bartek;2018-03-24
+249;nc+;20.65;Bartek;Bartek;2018-03-24
+250;batonik w pracy;1.80;Bartek;Bartek;2018-03-24
+251;batonik w pracy;1.80;Bartek;Bartek;2018-03-24
+252;zupa w pracy;2.50;Bartek;Bartek;2018-03-24
+253;precel w pracy;5.00;Bartek;Bartek;2018-03-24
+254;batonik w pracy;1.80;Bartek;Bartek;2018-03-24
+255;leki na trądzik;78.00;Bartek;Bartek;2018-03-24
+256;bilet miesięczny;60.00;Bartek;Bartek;2018-03-24
+257;pizza w pracy;22.50;Bartek;Bartek;2018-03-24
+258;zupa w pracy;2.50;Bartek;Bartek;2018-03-24
+259;batonik w pracy;1.40;Bartek;Bartek;2018-03-24
+260;gąbka kąpielowa;1.98;Bartek;Bartek;2018-03-24
+261;napój;1.99;Bartek;Bartek;2018-03-24
+262;mandarynki;4.88;Bartek;Bartek;2018-03-24
+263;obiad w pracy;8.50;Bartek;Bartek;2018-03-24
+264;batonik w pracy;1.40;Bartek;Bartek;2018-03-24
+265;chaczapuri;8.00;Bartek;Bartek;2018-03-24
+266;precle w pracy;10.70;Bartek;Bartek;2018-03-24
+267;woda;1.59;Bartek;Bartek;2018-03-24
+268;ser;4.19;Bartek;Wszyscy;2018-03-24
+269;chleb tostowy;2.99;Bartek;Wszyscy;2018-03-24
+270;pepsi;1.99;Bartek;Bartek;2018-03-24
+271;danie oyakata;3.99;Bartek;Bartek;2018-03-24
+272;batonik w pracy;1.80;Bartek;Bartek;2018-03-24
+273;klawiatura mechaniczna;249.00;Bartek;Bartek;2018-03-24
+274;prowizja BLIK;2.50;Bartek;Bartek;2018-03-24
+275;paliwo wielkanoc;60.00;Rafał;Wszyscy;2018-03-31
+276;błotniki rower;20.00;Rafał;Wszyscy;2018-04-11
+277;talerz do mikrofali;55.00;Rafał;Wszyscy;2018-04-11
+278;masło i chleb;10.00;Rafał;Wszyscy;2018-04-11
+279;pieczywo hert;7.00;Rafał;Wszyscy;2018-04-14
+280;banany;4.00;Rafał;Wszyscy;2018-04-14
+281;masło;7.50;Rafał;Wszyscy;2018-04-14
+282;zakupy lidl;86.00;Rafał;Aga i Rafał;2018-04-14
+283;wędliny i mięso;27.00;Aga;Aga i Rafał;2018-04-14
+284;ręcznik papierowy;6.50;Aga;Wszyscy;2018-04-14
+285;papier toaletowy;16.00;Aga;Wszyscy;2018-04-14
+286;kostka wc;9.00;Aga;Wszyscy;2018-04-14
+287;chusteczki do prania;10.00;Aga;Wszyscy;2018-04-14
+288;zakupy rossman;81.50;Aga;Aga i Rafał;2018-04-14
+289;paliwo;90.00;Rafał;Aga i Rafał;2018-04-14
+290;nutella;6.00;Rafał;Wszyscy;2018-04-14
+291;netflix;13.00;Bartek;Wszyscy;2018-04-16
+292;ser;4.19;Bartek;Wszyscy;2018-04-16
+293;chleb tostowy;2.99;Bartek;Wszyscy;2018-04-16
+294;cebula;0.32;Bartek;Bartek;2018-04-16
+295;kukurydza;4.49;Bartek;Bartek;2018-04-16
+296;majonez;7.29;Bartek;Bartek;2018-04-16
+297;napój;3.29;Bartek;Bartek;2018-04-16
+298;masło;7.29;Bartek;Wszyscy;2018-04-16
+299;bułki;3.56;Bartek;Wszyscy;2018-04-16
+300;napój;2.99;Bartek;Bartek;2018-04-16
+301;guma;6.29;Bartek;Bartek;2018-04-16
+302;czynsz;900.00;Bartek;Bartek;2018-04-16
+303;ser;3.99;Bartek;Wszyscy;2018-04-19
+304;chleb tostowy;2.99;Bartek;Wszyscy;2018-04-19
+305;napój;2.99;Bartek;Bartek;2018-04-19
+306;danie gotowe;3.99;Bartek;Bartek;2018-04-19
+307;paliwo;30.00;Rafał;Wszyscy;2018-04-24
+308;paliwo;30.00;Rafał;Aga i Rafał;2018-04-24
+309;masło, chleb tostowy,;10.00;Aga;Wszyscy;2018-04-28
+310;piwo x2;8.48;Bartek;Aga i Rafał;2018-04-30
+311;chleb tostowy x2;5.98;Bartek;Wszyscy;2018-04-30
+312;ser x2;7.98;Bartek;Wszyscy;2018-04-30
+313;netflix;13.00;Bartek;Wszyscy;2018-05-05
+314;Piwo książęce ciemne;3.99;Bartek;Aga i Rafał;2018-05-09
+315;mleko;2.99;Bartek;Wszyscy;2018-05-09
+316;szyba;520.00;Rafał;Wszyscy;2018-05-11
+317;olej;3.00;Rafał;Wszyscy;2018-05-11
+318;paliwo;85.00;Rafał;Aga i Rafał;2018-05-11
+319;banany;5.41;Rafał;Wszyscy;2018-05-12
+320;pistacje;14.47;Rafał;Wszyscy;2018-05-12
+321;pieczarki;4.49;Rafał;Bartek;2018-05-12
+322;mleko;1.89;Rafał;Wszyscy;2018-05-12
+323;ser;2.99;Rafał;Wszyscy;2018-05-12
+324;woda;8.94;Rafał;Wszyscy;2018-05-12
+325;bułki;1.95;Rafał;Wszyscy;2018-05-12
+326;zmywak;1.99;Rafał;Wszyscy;2018-05-12
+327;ręcznik papierowy;2.99;Rafał;Wszyscy;2018-05-12
+328;płyna do prania;12.99;Rafał;Wszyscy;2018-05-12
+329;worki na śmieci;3.69;Rafał;Wszyscy;2018-05-12
+330;filtr do wody, worki do odkurzacza;24.00;Aga;Wszyscy;2018-05-12
+331;mleko;3.00;Aga;Wszyscy;2018-05-13
+332;salami;4.00;Aga;Wszyscy;2018-05-13
+333;serek topiony;3.00;Aga;Wszyscy;2018-05-13
+334;chleb;3.00;Aga;Wszyscy;2018-05-13
+335;ubezpieczenie focus;276.00;Rafał;Bartek;2018-05-16
+336;chleb tostowy;3.00;Aga;Wszyscy;2018-05-16
+337;ser;3.49;Bartek;Wszyscy;2018-05-18
+338;chaczapuri x3;24.00;Bartek;Wszyscy;2018-05-18
+339;gruszki;1.59;Rafał;Wszyscy;2018-05-22
+340;jabłka;1.16;Rafał;Wszyscy;2018-05-22
+341;banany;3.23;Rafał;Wszyscy;2018-05-22
+342;mleko;1.89;Rafał;Wszyscy;2018-05-22
+343;masło;8.99;Rafał;Wszyscy;2018-05-22
+344;ryż;1.55;Rafał;Bartek;2018-05-22
+345;bułki;1.95;Rafał;Wszyscy;2018-05-22
+346;płyn do płukania;5.49;Rafał;Wszyscy;2018-05-22
+347;rolety - prezent dla mamy;250.00;Bartek;Aga i Rafał;2018-05-26
+348;papier toaletowy, ręcznik kuchenny, chusteczki do prania, płyn do naczyń, bułki, ser żółty, mleko, masło, owoce,woda;53.00;Aga;Wszyscy;2018-05-26
+349;chleb;3.50;Aga;Wszyscy;2018-05-26
+350;pieczarki;5.00;Rafał;Bartek;2018-05-26
+351;bułki i ser;6.00;Rafał;Wszyscy;2018-05-26
+352;ser;3.99;Bartek;Wszyscy;2018-05-27
+353;chleb tostowy;2.99;Bartek;Wszyscy;2018-05-27
+354;bulki;4.45;Bartek;Wszyscy;2018-05-27
+355;olej;13.89;Rafał;Wszyscy;2018-05-30
+356;bułki;1.77;Rafał;Wszyscy;2018-05-30
+357;majonez;4.85;Rafał;Wszyscy;2018-05-30
+358;paliwo;80.00;Rafał;Wszyscy;2018-05-31
+359;paliwo;100.00;Rafał;Wszyscy;2018-06-08
+360;jabłka;1.58;Rafał;Wszyscy;2018-06-09
+361;kurczak;10.54;Rafał;Wszyscy;2018-06-09
+362;banany;3.87;Rafał;Wszyscy;2018-06-09
+363;pomidor;0.66;Rafał;Wszyscy;2018-06-09
+364;cebula;0.51;Rafał;Wszyscy;2018-06-09
+365;salami;2.49;Rafał;Wszyscy;2018-06-09
+366;ser;4.95;Rafał;Wszyscy;2018-06-09
+367;masło;8.99;Rafał;Wszyscy;2018-06-09
+368;woda;3.54;Rafał;Wszyscy;2018-06-09
+369;syrop malinowy;5.99;Bartek;Aga i Rafał;2018-06-10
+370;przepływomierz;57.00;Rafał;Bartek;2018-06-10
+371;bułki;2.34;Aga;Wszyscy;2018-06-11
+372;ręczniki papierowe;2.99;Aga;Wszyscy;2018-06-11
+373;płyn do prania;12.99;Aga;Wszyscy;2018-06-11
+374;płyn do czyszczenia;4.99;Aga;Wszyscy;2018-06-11
+375;chleb;2.49;Aga;Wszyscy;2018-06-11
+376;banany;5.77;Aga;Wszyscy;2018-06-11
+377;mleko;1.99;Aga;Wszyscy;2018-06-11
+378;salami;2.79;Aga;Wszyscy;2018-06-11
+379;woda;3.54;Aga;Wszyscy;2018-06-11
+380;masło;8.99;Aga;Wszyscy;2018-06-11
+381;netflix;13.00;Bartek;Wszyscy;2018-06-16
+382;piwo x2;8.68;Bartek;Aga i Rafał;2018-06-17
+383;paliwo za 16 czerwca;100.00;Rafał;Wszyscy;2018-06-28
+384;2 butelki cifów;18.00;Rafał;Wszyscy;2018-06-28
+385;woda;10.00;Rafał;Wszyscy;2018-06-28
+386;papier toaletowy;5.00;Rafał;Wszyscy;2018-06-28
+387;masło;7.50;Rafał;Wszyscy;2018-06-28
+388;mleko;3.00;Bartek;Wszyscy;2018-06-30
+389;chleb tostowy;3.00;Bartek;Wszyscy;2018-06-30
+390;bułki x3;2.25;Bartek;Wszyscy;2018-06-30
+391;ser;3.99;Bartek;Wszyscy;2018-06-30
+392;netflix;13.00;Bartek;Wszyscy;2018-07-01
+393;paliwo;100.00;Rafał;Wszyscy;2018-07-08
+394;woda;3.54;Rafał;Wszyscy;2018-07-11
+395;bułki;5.00;Rafał;Wszyscy;2018-07-11
+396;płyn do mycia naczyć;4.00;Rafał;Wszyscy;2018-07-11
+397;płyn do prania;13.00;Rafał;Wszyscy;2018-07-11
+398;masło;9.00;Rafał;Wszyscy;2018-07-11
+399;płyn do płukania;8.00;Rafał;Wszyscy;2018-07-11
+400;kurczak polowa dla Bartka;7.00;Rafał;Bartek;2018-07-11
+401;sok jabłkowy;4.69;Bartek;Aga i Rafał;2018-07-15
+402;bułki pszenne x6;3.90;Bartek;Wszyscy;2018-07-15
+403;coca cola;2.00;Bartek;Aga i Rafał;2018-07-15
+404;banany;6.20;Bartek;Wszyscy;2018-07-15
+405;ser;3.99;Bartek;Wszyscy;2018-07-15
+406;woda;13.00;Rafał;Wszyscy;2018-07-23
+407;bułki;2.67;Rafał;Wszyscy;2018-07-23
+408;jabłka;3.00;Rafał;Wszyscy;2018-07-23
+409;kawa;40.00;Rafał;Wszyscy;2018-07-23
+410;ręcznik papierowy i papier toaletowy;8.00;Rafał;Wszyscy;2018-07-23
+411;kasza;2.69;Rafał;Bartek;2018-07-23
+412;masło;9.00;Rafał;Wszyscy;2018-07-23
+413;woda;4.00;Rafał;Wszyscy;2018-07-28
+414;jogurt naturalny;1.30;Rafał;Bartek;2018-07-28
+415;masło;9.00;Rafał;Wszyscy;2018-07-28
+416;cebula;0.50;Rafał;Wszyscy;2018-07-28
+417;kurczak;8.99;Rafał;Bartek;2018-07-28
+418;bułki;3.56;Rafał;Wszyscy;2018-07-28
+419;banany;5.00;Rafał;Wszyscy;2018-07-28
+420;woda;11.00;Rafał;Wszyscy;2018-07-31
+421;netflix;13.00;Bartek;Wszyscy;2018-08-04
+422;masło;7.69;Bartek;Wszyscy;2018-08-04
+423;mleko;2.99;Bartek;Wszyscy;2018-08-04
+424;papier toaletowy i ręczniki;24.00;Rafał;Wszyscy;2018-08-17
+425;woda;4.00;Rafał;Wszyscy;2018-08-20
+426;płyn do mycia naczyń;5.00;Rafał;Wszyscy;2018-08-20
+427;ser;4.00;Rafał;Wszyscy;2018-08-20
+428;masło;9.00;Rafał;Wszyscy;2018-08-20
+429;worki na śmieci;3.69;Rafał;Wszyscy;2018-08-20
+430;kostka do wc;3.00;Rafał;Wszyscy;2018-08-20
+431;salami;2.79;Rafał;Wszyscy;2018-08-20
+432;mydło;2.70;Rafał;Wszyscy;2018-08-20
+433;mleko;3.00;Bartek;Wszyscy;2018-08-27
+434;woda;1.00;Bartek;Aga i Rafał;2018-08-27
+435;ser;4.00;Bartek;Wszyscy;2018-08-27
+436;woda;2.79;Bartek;Wszyscy;2018-08-27
+437;paliwo;100.00;Rafał;Wszyscy;2018-08-28
+438;woda;9.00;Rafał;Wszyscy;2018-08-28
+439;olej;14.00;Rafał;Wszyscy;2018-08-28
+440;bułki;3.50;Rafał;Wszyscy;2018-08-28
+441;banany;2.60;Rafał;Wszyscy;2018-08-28
+442;paliwo x 2;200.00;Rafał;Wszyscy;2018-09-06
+443;masło;7.69;Bartek;Wszyscy;2018-09-06
+444;netflix;13.00;Bartek;Wszyscy;2018-09-08
+445;ketchup;2.99;Aga;Wszyscy;2018-09-10
+446;woda;4.14;Aga;Wszyscy;2018-09-10
+447;owoce;6.00;Aga;Wszyscy;2018-09-10
+449;płyn do prania;9.99;Aga;Wszyscy;2018-09-10
+450;pistacjre;11.98;Aga;Wszyscy;2018-09-10
+451;masło;8.99;Aga;Wszyscy;2018-09-10
+452;mleko;1.99;Aga;Wszyscy;2018-09-10
+453;majonez;4.79;Aga;Wszyscy;2018-09-10
+454;woda;4.00;Rafał;Wszyscy;2018-09-13
+455;salami;4.50;Rafał;Wszyscy;2018-09-13
+456;banany;3.50;Rafał;Wszyscy;2018-09-15
+457;ręczniki papierowe;13.50;Rafał;Wszyscy;2018-09-15
+458;papier toaletowy;16.00;Rafał;Wszyscy;2018-09-15
+459;chusteczki do prania;10.00;Rafał;Wszyscy;2018-09-15
+460;piwo x2;7.98;Bartek;Aga i Rafał;2018-09-19
+461;kabanosy i bułki;12.00;Rafał;Wszyscy;2018-09-26
+462;paliwo;100.00;Rafał;Wszyscy;2018-09-28
+463;coca-cola;2.49;Bartek;Aga i Rafał;2018-09-30
+464;mleko;2.99;Bartek;Wszyscy;2018-09-30
+465;masło;7.99;Bartek;Wszyscy;2018-09-30
+466;netflix;13.00;Bartek;Wszyscy;2018-10-06
+467;woda;13.00;Rafał;Wszyscy;2018-10-07
+468;ser;4.00;Rafał;Wszyscy;2018-10-07
+469;salami;3.00;Rafał;Wszyscy;2018-10-07
+470;bułki;1.56;Rafał;Wszyscy;2018-10-09
+471;woda;4.14;Rafał;Wszyscy;2018-10-09
+472;ziemniak;5.00;Rafał;Wszyscy;2018-10-09
+473;chusteczki mokre do czyszczenia;5.80;Rafał;Wszyscy;2018-10-09
+474;płyn do prania;13.00;Rafał;Wszyscy;2018-10-09
+475;płyn do płukania;8.00;Rafał;Wszyscy;2018-10-09
+476;salami;2.80;Rafał;Wszyscy;2018-10-09
+477;szynka;5.00;Rafał;Wszyscy;2018-10-09
+478;masło;9.00;Rafał;Wszyscy;2018-10-09
+479;płyn do naczyń;5.00;Rafał;Wszyscy;2018-10-09
+480;ser;3.00;Rafał;Wszyscy;2018-10-09
+481;banany;4.00;Rafał;Wszyscy;2018-10-09
+506;banany;6.00;Rafał;Wszyscy;2018-10-15
+507;pieczarki;4.50;Rafał;Wszyscy;2018-10-15
+508;ser;3.99;Bartek;Wszyscy;2018-10-16
+509;mleko;2.99;Bartek;Wszyscy;2018-10-16
+510;woda;12.00;Rafał;Wszyscy;2018-10-19
+511;bułki;3.00;Rafał;Wszyscy;2018-10-19
+512;kabanosy;10.00;Rafał;Wszyscy;2018-10-19
+513;masło;9.00;Rafał;Wszyscy;2018-10-19
+514;papier toaletowy;16.00;Rafał;Wszyscy;2018-10-22
+515;woda;4.00;Rafał;Wszyscy;2018-10-22
+516;szynka;5.50;Rafał;Wszyscy;2018-10-22
+517;masło;9.00;Rafał;Wszyscy;2018-10-22
+518;salami;2.80;Rafał;Wszyscy;2018-10-22
+519;bułki;2.00;Rafał;Wszyscy;2018-10-22
+520;mleko;2.00;Rafał;Wszyscy;2018-10-22
+521;banany;4.64;Rafał;Wszyscy;2018-10-22
+522;pieczarki;4.50;Rafał;Wszyscy;2018-10-22
+523;ser;3.99;Bartek;Wszyscy;2018-10-27
+524;twaróg;4.69;Bartek;Wszyscy;2018-10-27
+525;bułki;6.45;Bartek;Wszyscy;2018-10-27
+526;polędwica;3.99;Bartek;Wszyscy;2018-10-27
+527;woda;6.00;Rafał;Wszyscy;2018-10-30
+528;paliwo;100.00;Bartek;Wszyscy;2018-10-31
+529;coca-cola x2;6.58;Bartek;Aga i Rafał;2018-10-31
+530;zupa pho x2;4.78;Bartek;Aga i Rafał;2018-10-31
+531;masło;9.99;Bartek;Wszyscy;2018-10-31
+532;bułki;6.64;Bartek;Wszyscy;2018-10-31
+533;netflix;13.00;Bartek;Wszyscy;2018-11-01

@@ -24,7 +24,7 @@ import static java.util.stream.Collectors.toList;
 public class ProductService {
 
     public List<ProductDTO> findProductsForView() {
-         return productRepository.findProductsByCreationDateGreaterThanEqualOrCategoryEquals(DateUtils.getSixtyDaysAgo(), Category.NONE)
+        return productRepository.findProductsByCreationDateGreaterThanEqualOrCategoryEquals(DateUtils.getSixtyDaysAgo(), Category.NONE)
                                 .stream()
                                 .map(this::entityToDTO)
                                 .collect(Collectors.toList());
@@ -92,8 +92,7 @@ public class ProductService {
         product.setDebtorGroup(memberGroupService.findByName(dto.getDebtorGroup()));
         product.setCreditor(memberService.findByName(dto.getCreditor()));
         product.setCategory(Category.getByPolishName(dto.getCategory()));
-        product.setCreationDate(Objects.isNull(dto.getCreationDate()) ? LocalDate.now() : LocalDate.parse(dto
-                .getCreationDate()));
+        product.setCreationDate(Objects.isNull(dto.getCreationDate()) ? LocalDate.now() : LocalDate.parse(dto.getCreationDate()));
         return product;
     }
 
