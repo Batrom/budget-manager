@@ -14,7 +14,7 @@ angular.module('ngBudgetCalc')
 
         function createGetUrl(url, data) {
             if (isEmpty(data)) return url;
-            else return url + Object.entries(data).map(entry => entry[0] + '=' + entry[1]).reduce((prev, next) => prev + '&' + next, '?');
+            else return url + '?' + Object.entries(data).map(entry => entry[0] + '=' + entry[1]).reduce((prev, next) => prev + '&' + next);
         }
 
         return {

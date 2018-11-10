@@ -1,9 +1,9 @@
 angular.module('ngBudgetCalc').constant('url', {
         getCommonData: '/common/getData',
 
-        getDebts: '/debt/getAll?member=',
+        getDebts: '/debt/getAll',
 
-        getChartData: '/chart/getData?member=',
+        getChartData: '/chart/getData',
 
         getDuties: '/duty/getAll',
         saveDuty: '/duty/save',

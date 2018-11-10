@@ -50,7 +50,7 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
     });
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
-        ChartService.loadChartData(MemberService.getMember().name);
+        ChartService.loadChartData({member: MemberService.getMember().name});
     });
 
     $scope.updateChart = function () {
@@ -59,5 +59,5 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
         myChart.update();
     };
 
-    ChartService.loadChartData(MemberService.getMember().name);
+    ChartService.loadChartData({member: MemberService.getMember().name});
 });

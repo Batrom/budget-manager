@@ -2,7 +2,7 @@ angular.module('ngBudgetCalc').controller('DebtController', function ($scope, Me
     $scope.debts = DebtService.getDebts();
     $scope.getDebtText = debt => $sce.trustAsHtml(DebtService.getDebtText(debt));
 
-    executeIfEmpty($scope.products, () => DebtService.loadDebts(MemberService.getMember().name));
+    executeIfEmpty($scope.products, () => DebtService.loadDebts({member: MemberService.getMember().name}));
 
     EventService.addListener(Event.DEBTS_CHANGED, $scope, () => {
         $scope.debts = DebtService.getDebts();
