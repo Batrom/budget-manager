@@ -15,8 +15,8 @@ import java.util.Map;
 public class ProductRestController extends BaseRestController {
 
     @GetMapping(value = "/getAll")
-    public ResponseEntity<List<ProductDTO>> getAll() {
-        return get(productService::findProductsForView);
+    public ResponseEntity<List<ProductDTO>> getAll(@RequestParam("member") final String memberName) {
+        return execute(memberName, productService::findProductsForView);
     }
 
     @PostMapping(value = "/save")

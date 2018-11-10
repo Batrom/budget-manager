@@ -23,7 +23,7 @@ angular.module('ngBudgetCalc').controller('AssignProductCategoryController', fun
     };
 
     executeIfEmpty($scope.productsByCategory, () => {
-        ProductService.loadProducts()
+        ProductService.loadProducts({member: MemberService.getMember().name})
     });
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {

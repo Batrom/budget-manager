@@ -35,7 +35,7 @@ angular.module('ngBudgetCalc').controller('NewProductController', function ($sco
         };
     }
 
-    executeIfEmpty($scope.todaysMemberProducts, () => ProductService.loadProducts());
+    executeIfEmpty($scope.todaysMemberProducts, () => ProductService.loadProducts({member: MemberService.getMember().name}));
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
         $scope.todaysMemberProducts = ProductService.getTodaysMemberProducts();

@@ -20,19 +20,21 @@ public class ChartService {
 
     public List<DoughnutChartDTO> getData(final String memberName) {
         return productService.findProductsByDebtorOrCreditorName(memberName)
-                                     .stream()
-                                     .map(this::productToChartDataWrapper)
-                                     .collect(groupingBy(ChartDataWrapper::getDate,
-                                             groupingBy(ChartDataWrapper::getLabel,
-                                                     reducing(BigDecimal.ZERO, ChartDataWrapper::getValue, BigDecimal::add))))
-                                     .entrySet()
-                                     .stream()
-                                     .map(entry -> new DoughnutChartDTO(entry.getKey(), entry.getValue()
-                                                                                             .entrySet()
-                                                                                             .stream()
-                                                                                             .map(innerEntry -> new KeyValue<>(innerEntry.getKey(), innerEntry.getValue().setScale(2, BigDecimal.ROUND_HALF_UP)))
-                                                                                             .collect(toList())))
-                                     .collect(toList());
+                             .stream()
+                             .map(this::productToChartDataWrapper)
+                             .collect(groupingBy(ChartDataWrapper::getDate,
+                                     groupingBy(ChartDataWrapper::getLabel,
+                                             reducing(BigDecimal.ZERO, ChartDataWrapper::getValue, BigDecimal::add))))
+                             .entrySet()
+                             .stream()
+                             .map(entry -> new DoughnutChartDTO(entry.getKey(), entry.getValue()
+                                                                                     .entrySet()
+                                                                                     .stream()
+                                                                                     .map(innerEntry -> new KeyValue<>(innerEntry.getKey(), innerEntry
+                                                                                             .getValue()
+                                                                                             .setScale(2, BigDecimal.ROUND_HALF_UP)))
+                                                                                     .collect(toList())))
+                             .collect(toList());
     }
 
     private ChartDataWrapper productToChartDataWrapper(final Product product) {
@@ -46,7 +48,6 @@ public class ChartService {
 
     private ProductService productService;
 
-    @Autowired
     public ChartService(final ProductService productService) {
         this.productService = productService;
     }

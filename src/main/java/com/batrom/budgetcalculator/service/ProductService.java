@@ -23,8 +23,10 @@ import static java.util.stream.Collectors.toList;
 @Service
 public class ProductService {
 
-    public List<ProductDTO> findProductsForView() {
-         return productRepository.findProductsByCreationDateGreaterThanEqualOrCategoryEquals(DateUtils.getSixtyDaysAgo(), Category.NONE)
+    public List<ProductDTO> findProductsForView(final String memberName) {
+        final Member member = memberService.findByName(memberName);
+        final List<MemberGroup> memberGroups = memberGroupService.findMemberGroupsByMember(member);
+        return productRepository.findProductsForView(memberGroups, member, DateUtils.getSixtyDaysAgo(), Category.NONE)
                                 .stream()
                                 .map(this::entityToDTO)
                                 .collect(Collectors.toList());

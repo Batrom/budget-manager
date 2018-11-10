@@ -16,7 +16,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findProductsByCreationDateGreaterThanEqualAndCreationDateLessThan(final LocalDate from, final LocalDate to);
 
-    List<Product> findProductsByCreationDateGreaterThanEqualOrCategoryEquals(final LocalDate from, final Category category);
+    @Query("SELECT pr FROM Product pr WHERE ((pr.debtorGroup IN :memberGroups OR pr.creditor = :creditor) AND pr.creationDate >= :creationDate) OR " +
+            "((pr.debtorGroup IN :memberGroups OR pr.creditor = :creditor) AND pr.category = :category)")
+    List<Product> findProductsForView(@Param("memberGroups") final List<MemberGroup> memberGroups,
+                                      @Param("creditor") final Member creditor,
+                                      @Param("creationDate") final LocalDate creationDate,
+                                      @Param("category") final Category category);
 
     List<Product> findProductsByDebtorGroupInOrCreditor(final List<MemberGroup> memberGroups, final Member creditor);
 

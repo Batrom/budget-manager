@@ -25,7 +25,7 @@ angular.module('ngBudgetCalc').controller('ProductListController', function ($sc
         return MemberService.getMember().name === product.creditor;
     };
 
-    executeIfEmpty($scope.products, () => ProductService.loadProducts());
+    executeIfEmpty($scope.products, () => ProductService.loadProducts({member: MemberService.getMember().name}));
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
         $scope.products = ProductService.getAllProducts();
