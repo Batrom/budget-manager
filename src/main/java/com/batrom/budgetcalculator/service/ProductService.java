@@ -15,10 +15,12 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import static com.batrom.budgetcalculator.util.FunctionUtils.wrapToFunction;
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 
 @Service
 public class ProductService {
@@ -70,14 +72,11 @@ public class ProductService {
         return productRepository.findProductsByCreationDateGreaterThanEqualAndCreationDateLessThan(from, to);
     }
 
-    public List<Product> findProductsByDebtorOrCreditor(final Member member) {
-        final List<MemberGroup> memberGroups = memberGroupService.findMemberGroupsByMember(member);
-        return productRepository.findProductsByDebtorGroupInOrCreditor(memberGroups, member);
-    }
-
-    public List<Product> findProductsByDebtorOrCreditorName(final String memberName) {
-        return wrapToFunction(memberService::findByName).andThen(this::findProductsByDebtorOrCreditor)
-                                                        .apply(memberName);
+    public List<Product> findProductsByDebtors(final Set<Member> debtors) {
+        final Set<MemberGroup> memberGroups = debtors.stream()
+                                                     .flatMap(member -> member.getMemberGroups().stream())
+                                                     .collect(toSet());
+        return productRepository.findProductsByDebtorGroupIn(memberGroups);
     }
 
     public List<Product> findProductsForDebtsView(final Member member) {

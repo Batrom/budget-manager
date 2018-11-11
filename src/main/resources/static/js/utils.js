@@ -30,3 +30,7 @@ function isEmpty(obj) {
 function isNotEmpty(obj) {
     return !isEmpty(obj);
 }
+
+function getColor(varName) {
+    return getComputedStyle(document.body).getPropertyValue(varName);
+}

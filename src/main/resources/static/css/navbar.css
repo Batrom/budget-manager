@@ -1,9 +1,18 @@
+.navbar-inverse {
+    background-color: var(--bc-dark-x3-color);
+    border-color: var(--bc-dark-x4-color);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: var(--bc-dark-x4-color);
+}
+
 .navbar {
     border-radius: 0;
 }
 
 .btn-logout {
     margin-right: 15px;
-    border-left: 1px solid var(--bc-darkest-color);
-    border-right: 1px solid var(--bc-darkest-color);
+    border-left: 1px solid var(--bc-dark-x4-color);
+    border-right: 1px solid var(--bc-dark-x4-color);
 }

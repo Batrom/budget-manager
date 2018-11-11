@@ -1,8 +1,8 @@
 #assign-product-category div.category-container {
-    border: 2px dashed var(--bc-darkest-color);
+    border: 2px dashed var(--bc-dark-x4-color);
     min-height: 458px;
     border-radius: 5px;
-    background: #333 none;
+    background: var(--bc-dark-x2-color) none;
 
     margin-bottom: 10px;
     margin-top: 10px;
@@ -14,8 +14,8 @@
 
 div.product-to-assign-category {
     background: var(--bc-bright-color);
-    border: 1px solid var(--bc-darkest-color);
-    color: #333;
+    border: 1px solid var(--bc-dark-x4-color);
+    color: var(--bc-dark-x4-color);
     padding: 10px 10px;
     border-radius: 5px;
     text-align: left;
@@ -33,7 +33,7 @@ div.product-to-assign-category {
 }
 
 div.product-to-assign-category:hover {
-    color: var(--bc-dark-color);
+    color: var(--bc-dark-x1-color);
     cursor: move;
 }
 .noselect {

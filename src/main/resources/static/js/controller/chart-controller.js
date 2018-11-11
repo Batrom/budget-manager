@@ -1,8 +1,17 @@
-angular.module('ngBudgetCalc').controller('ChartController', function ($scope, ChartService, Event, MemberService, EventService) {
+angular.module('ngBudgetCalc').controller('ChartController', function ($scope, ChartService, Event, MemberService, EventService, CommonDataService) {
     $scope.chartData = [{labels: [''], values: []}];
     $scope.selectedData = $scope.chartData[0];
+    $scope.memberGroups = CommonDataService.getMemberGroups();
+    $scope.chosenMemberGroup = $scope.memberGroups.filter(group => group === MemberService.getMember().name)[0] || $scope.memberGroups[0];
 
-    $scope.getSelectSize = () => $scope.chartData.length !== 0 ? $scope.chartData.length : 1;
+    $scope.cachedChosenMonthIndex = 0;
+    $scope.reloadData = () => {
+        $scope.cachedChosenMonthIndex = $scope.chartData.indexOf($scope.selectedData) || 0;
+        ChartService.loadChartData({memberGroup: $scope.chosenMemberGroup});
+    };
+
+    $scope.memberGroupsSelectSize = () => $scope.memberGroups.length !== 0 ? ($scope.memberGroups.length > 4 ? 4 : $scope.memberGroups.length) : 1;
+    $scope.monthSelectSize = () => $scope.chartData.length !== 0 ? ($scope.chartData.length > 10 ? 10 : $scope.chartData.length) : 1;
 
     Chart.defaults.global.defaultFontFamily = "'Lato', sans-serif";
     let myChart = new Chart(angular.element(document.querySelector('#chart'))[0], {
@@ -39,28 +48,23 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
         },
         options: {
             tooltips: {
-              enabled: false
+                enabled: true
             },
             legend: {
                 display: true,
                 position: 'right',
                 labels: {
-                    fontColor: '#f5f5f5'
+                    fontColor: getColor('--bc-bright-color')
                 }
             },
             plugins: {
                 datalabels: {
-                    backgroundColor: function(context) {
+                    backgroundColor: function (context) {
                         return context.dataset.backgroundColor;
                     },
-                    color: getComputedStyle(document.body).getPropertyValue('--bc-bright-color'),
-                    display: function(context) {
-                        let dataset = context.dataset;
-                        let count = dataset.data.length;
-                        let value = dataset.data[context.dataIndex];
-                        return value > count * 1.5;
-                    },
-                    formatter: function(value) {
+                    color: getColor('--bc-bright-color'),
+                    formatter: function (value) {
+                        console.log(value);
                         return value + ' zł';
                     }
                 }
@@ -70,12 +74,12 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
 
     EventService.addListener(Event.CHART_DATA_CHANGED, $scope, () => {
         $scope.chartData = ChartService.getData();
-        $scope.selectedData = $scope.chartData[0];
+        $scope.selectedData = $scope.chartData[$scope.cachedChosenMonthIndex];
         $scope.updateChart();
     });
 
     EventService.addListener(Event.PRODUCTS_CHANGED, $scope, () => {
-        ChartService.loadChartData({member: MemberService.getMember().name});
+        ChartService.loadChartData({memberGroup: $scope.chosenMemberGroup});
     });
 
     $scope.updateChart = function () {
@@ -84,5 +88,5 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
         myChart.update();
     };
 
-    ChartService.loadChartData({member: MemberService.getMember().name});
+    ChartService.loadChartData({memberGroup: $scope.chosenMemberGroup});
 });

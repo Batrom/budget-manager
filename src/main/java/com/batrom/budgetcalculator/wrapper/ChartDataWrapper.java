@@ -26,6 +26,6 @@ public class ChartDataWrapper {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getDate(), getLabel(), getValue());
+        return Objects.hash(getDate(), getLabel(), getValue());
     }
 }

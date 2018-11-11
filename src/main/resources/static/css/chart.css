@@ -1,25 +1,29 @@
-select.select-chart {
+select.chart-select {
     overflow: hidden;
     overflow-y: auto;
 }
 
-select.select-chart::-webkit-scrollbar-track {
-    border: 1px solid var(--bc-darkest-color);
+select.chart-select::-webkit-scrollbar-track {
+    border: 1px solid var(--bc-dark-x4-color);
     border-radius: 5px;
     background-color: var(--bc-bright-color);
 }
 
-select.select-chart::-webkit-scrollbar {
+select.chart-select::-webkit-scrollbar {
     width: 12px;
     background-color: #333;
 }
 
-select.select-chart::-webkit-scrollbar-thumb {
+select.chart-select::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px var(--bc-darkest-color);
-    background-color: var(--bc-dark-color);
+    -webkit-box-shadow: inset 0 0 6px var(--bc-dark-x4-color);
+    background-color: var(--bc-dark-x1-color);
 }
 
 .chart-container {
     margin-top: 25px;
+}
+
+.chart-member-select {
+    margin-top: 20px;
 }

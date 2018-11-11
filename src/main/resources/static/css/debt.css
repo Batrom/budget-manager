@@ -4,7 +4,7 @@
 
 .debt-list li {
     margin-top: 10px;
-    color: var(--bc-darker-color);
+    color: var(--bc-dark-x2-color);
 }
 
 .debt-list li:first-child {
@@ -25,7 +25,7 @@
 
 .panel-title a:hover {
     text-decoration: none;
-    color: var(--bc-dark-color);
+    color: var(--bc-dark-x1-color);
 }
 
 .panel-title a:active {

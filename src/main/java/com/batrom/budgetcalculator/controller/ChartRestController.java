@@ -18,8 +18,8 @@ import java.util.List;
 public class ChartRestController extends BaseRestController {
 
     @GetMapping(value = "/getData")
-    public ResponseEntity<List<DoughnutChartDTO>> getData(@RequestParam("member") String member) {
-        return execute(member, chartService::getData);
+    public ResponseEntity<List<DoughnutChartDTO>> getData(@RequestParam("memberGroup") String memberGroup) {
+        return execute(memberGroup, chartService::getData);
     }
 
     private final ChartService chartService;
