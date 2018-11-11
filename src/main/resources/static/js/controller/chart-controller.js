@@ -1,4 +1,4 @@
-angular.module('ngBudgetCalc').controller('ChartController', function ($scope, ChartService, Event, MemberService, EventService, CommonDataService) {
+angular.module('ngBudgetCalc').controller('ChartController', function ($scope, ChartService, Event, MemberService, EventService, CommonDataService, $http) {
     $scope.chartData = [{labels: [''], values: []}];
     $scope.selectedData = $scope.chartData[0];
     $scope.memberGroups = CommonDataService.getMemberGroups();
@@ -64,7 +64,6 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
                     },
                     color: getColor('--bc-bright-color'),
                     formatter: function (value) {
-                        console.log(value);
                         return value + ' zł';
                     }
                 }
@@ -89,4 +88,10 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
     };
 
     ChartService.loadChartData({memberGroup: $scope.chosenMemberGroup});
+
+    $scope.triggerTask = () => {
+        $http.get('/debt/triggerTask').then(response => {
+        }, response => {
+        });
+    }
 });

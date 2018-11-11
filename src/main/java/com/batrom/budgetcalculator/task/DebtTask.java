@@ -8,8 +8,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.batrom.budgetcalculator.util.DateUtils.getFirstDayOfLastMonth;
-import static com.batrom.budgetcalculator.util.DateUtils.getFirstDayOfThisMonth;
+import java.time.LocalDate;
+
+import static com.batrom.budgetcalculator.util.DateUtils.*;
 import static com.batrom.budgetcalculator.util.FunctionUtils.wrapToBiFunction;
 
 @CommonsLog
@@ -21,6 +22,19 @@ public class DebtTask {
     public void run() {
         debtService.save(wrapToBiFunction(productService::findProductsBetweenDates).andThen(debtService::calculateDebts)
                                                                                    .apply(getFirstDayOfLastMonth(), getFirstDayOfThisMonth()));
+    }
+
+    public void fillOldData() {
+        final LocalDate startingDate = getFirstDayOfMonth(LocalDate.now().minusMonths(24));
+        saveThenReturnStartingDate(startingDate);
+    }
+
+    private LocalDate saveThenReturnStartingDate(final LocalDate from) {
+        final LocalDate to = getFirstDayOfMonth(from.plusMonths(1));
+        debtService.save(wrapToBiFunction(productService::findProductsBetweenDates).andThen(debtService::calculateDebts)
+                                                                                   .apply(from, to));
+        if (!to.isAfter(LocalDate.now())) return saveThenReturnStartingDate(to);
+        else return LocalDate.now().plusMonths(1);
     }
 
     private final DebtService debtService;

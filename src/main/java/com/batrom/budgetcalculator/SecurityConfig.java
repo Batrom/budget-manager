@@ -36,6 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/js/**", "/css/**", "/lib/**", "/bootstrap/**", "/view/**").permitAll()
             .antMatchers("/", "/user", "index.html").permitAll()
+            .antMatchers("/debt/triggerTask").permitAll()
             .anyRequest().authenticated()
             .and()
             .csrf().csrfTokenRepository(csrfTokenRepository())
