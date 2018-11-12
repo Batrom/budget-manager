@@ -28,7 +28,7 @@ angular.module('ngBudgetCalc', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular
                 templateUrl: 'view/assign-product-category.html',
                 controller: 'AssignProductCategoryController'
             })
-            .when('/charts', {
+            .when('/chart', {
                 templateUrl: 'view/chart.html',
                 controller: 'ChartController'
             })

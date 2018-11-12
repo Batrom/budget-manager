@@ -4,6 +4,7 @@ angular.module('ngBudgetCalc').constant('Event', {
         DUTIES_CHANGED: 'dutiesChanged',
         CHART_DATA_CHANGED: 'chartDataChanged',
         COMMON_DATA_CHANGED: 'commonDataChanged',
-        MEMBER_CHANGED: 'memberChanged'
+        MEMBER_CHANGED: 'memberChanged',
+        LOADING_CHANGED: 'loadingChanged'
     }
 );

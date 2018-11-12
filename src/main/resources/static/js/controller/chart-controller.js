@@ -64,7 +64,6 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
                     },
                     color: getColor('--bc-bright-color'),
                     formatter: function (value) {
-                        console.log(value);
                         return value + ' zł';
                     }
                 }
