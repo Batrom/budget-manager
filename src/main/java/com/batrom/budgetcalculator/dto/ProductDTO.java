@@ -16,6 +16,7 @@ public class ProductDTO {
     private String debtorGroup;
     private String category;
     private String creationDate;
+    private Boolean canEdit;
 
     @Override
     public boolean equals(Object o) {

@@ -107,6 +107,7 @@ public class ProductService {
         productDTO.setCreditor(product.getCreditor().getName());
         productDTO.setCategory(product.getCategory().name());
         productDTO.setCreationDate(product.getCreationDate().toString());
+        productDTO.setCanEdit(DateUtils.isThisMonth(product.getCreationDate()));
         return productDTO;
     }
 

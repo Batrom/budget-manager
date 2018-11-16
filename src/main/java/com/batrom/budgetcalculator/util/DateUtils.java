@@ -21,6 +21,11 @@ public class DateUtils {
         return getFirstDayOfMonth(LocalDate.now());
     }
 
+    public static boolean isThisMonth(final LocalDate date) {
+        final LocalDate now = LocalDate.now();
+        return date.getMonth().equals(now.getMonth()) && date.getYear() == now.getYear();
+    }
+
     public static LocalDate getFirstDayOfLastMonth() {
         return getFirstDayOfMonth(LocalDate.now().minusMonths(1));
     }

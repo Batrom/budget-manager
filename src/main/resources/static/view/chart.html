@@ -1,13 +1,16 @@
 <div class="row chart-container">
     <div class="col-md-3">
-        <label>Wybierz miesiąc</label>
-        <select data-ng-change="updateChart()" size="{{monthSelectSize()}}" class="form-control chart-select"
-                data-ng-model="selectedData"
-                data-ng-options="data.date for data in chartData">
-        </select>
-        <div class="form-group chart-member-select">
+        <div class="form-group">
             <label>Wybierz grupę</label>
-            <select data-ng-change="reloadData()" size="{{memberGroupsSelectSize()}}" class="form-control chart-select" data-ng-model="chosenMemberGroup" data-ng-options="group for group in memberGroups">
+            <select data-ng-change="reloadData()" size="{{memberGroupsSelectSize()}}" class="form-control chart-select" data-ng-model="chosenMemberGroup"
+                    data-ng-options="group for group in memberGroups">
+            </select>
+        </div>
+        <div class="form-group chart-month-select">
+            <label>Wybierz miesiąc</label>
+            <select data-ng-change="updateChart()" size="{{monthSelectSize()}}" class="form-control chart-select"
+                    data-ng-model="selectedData"
+                    data-ng-options="data.date for data in chartData">
             </select>
         </div>
     </div>

@@ -38,7 +38,7 @@
             {{product.creditor}}
         </td>
         <td>
-            <div data-ng-show="isLoggedMemberProduct(product)">
+            <div data-ng-show="canEdit(product)">
                 <button type="button" class="btn btn-warning btn-edit-product-list" data-ng-click="openUpdateProductModal(product)">
                     <i class="fa fa-pencil-square-o fa-lg"></i>
                 </button>

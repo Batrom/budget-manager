@@ -21,8 +21,8 @@ angular.module('ngBudgetCalc').controller('ProductListController', function ($sc
         });
     };
 
-    $scope.isLoggedMemberProduct = function (product) {
-        return MemberService.getMember().name === product.creditor;
+    $scope.canEdit = function (product) {
+        return MemberService.getMember().name === product.creditor && product.canEdit;
     };
 
     executeIfEmpty($scope.products, () => ProductService.loadProducts({member: MemberService.getMember().name}));
