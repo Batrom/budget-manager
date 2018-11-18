@@ -2,7 +2,7 @@
     <div class="col-md-3">
         <div class="form-group">
             <label>Wybierz grupę</label>
-            <select data-ng-change="reloadData()" size="{{memberGroupsSelectSize()}}" class="form-control chart-select" data-ng-model="chosenMemberGroup"
+            <select data-ng-change="reloadData()" size="{{memberGroupsSelectSize()-1}}" class="form-control chart-select" data-ng-model="chosenMemberGroup"
                     data-ng-options="group for group in memberGroups">
             </select>
         </div>

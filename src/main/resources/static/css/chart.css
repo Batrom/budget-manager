@@ -8,20 +8,20 @@ select.chart-select {
 }
 
 select.chart-select::-webkit-scrollbar-track {
-    border: 1px solid var(--bc-color-2-c);
+    border: 1px solid var(--bc-color-3-c);
     border-radius: 5px;
     background-color: var(--bc-color-3-a);
 }
 
 select.chart-select::-webkit-scrollbar {
     width: 12px;
-    background-color: #333;
+    background-color: var(--bc-color-3-a);
 }
 
 select.chart-select::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px var(--bc-color-2-c);
-    background-color: var(--bc-color-1-a);
+    -webkit-box-shadow: inset 0 0 6px var(--bc-color-3-c);
+    background-color: var(--bc-color-3-a);
 }
 
 .chart-container {

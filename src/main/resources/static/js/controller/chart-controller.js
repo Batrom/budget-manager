@@ -10,7 +10,7 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
         ChartService.loadChartData({memberGroup: $scope.chosenMemberGroup});
     };
 
-    $scope.memberGroupsSelectSize = () => $scope.memberGroups.length !== 0 ? ($scope.memberGroups.length > 4 ? 4 : $scope.memberGroups.length) : 1;
+    $scope.memberGroupsSelectSize = () => $scope.memberGroups.length !== 0 ? ($scope.memberGroups.length > 6 ? 6 : $scope.memberGroups.length) : 1;
     $scope.monthSelectSize = () => $scope.chartData.length !== 0 ? ($scope.chartData.length > 10 ? 10 : $scope.chartData.length) : 1;
 
     Chart.defaults.global.defaultFontFamily = "'Lato', sans-serif";
