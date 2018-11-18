@@ -38,8 +38,8 @@
     height: 128px;
     margin: 1px;
     border-radius: 50%;
-    border: 5px solid #fff;
-    border-color: #fff transparent #fff transparent;
+    border: 5px solid var(--bc-color-3-a);
+    border-color: var(--bc-color-3-a) transparent var(--bc-color-3-a) transparent;
     animation: lds-dual-ring 1.2s linear infinite;
 }
 

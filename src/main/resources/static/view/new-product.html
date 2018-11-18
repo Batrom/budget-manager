@@ -24,7 +24,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-default">Dodaj</button>
+            <button id="add-product"type="submit" class="btn btn-default">Dodaj</button>
         </div>
     </form>
 </div>
@@ -48,11 +48,11 @@
                     </div>
                 </div>
                 <div class="col-sm-1">
-                    <button type="button" class="btn btn-warning btn-edit-product" data-ng-click="openUpdateProductModal(product)">
+                    <button type="button" class="btn btn-edit-product" data-ng-click="openUpdateProductModal(product)">
                         <i class="fa fa-pencil-square-o fa-2x fa-center"></i></button>
                 </div>
                 <div class="col-sm-1">
-                    <button type="button" class="btn btn-danger btn-edit-product" data-ng-click="deleteProduct(product)">
+                    <button type="button" class="btn btn-edit-product btn-delete-product" data-ng-click="deleteProduct(product)">
                         <i class="fa fa-trash-o fa-2x fa-center"></i></button>
                 </div>
             </div>

@@ -12,7 +12,7 @@
     overflow: hidden;
     max-width: 90%;
     max-height: 90%;
-    border: 2px solid var(--bc-dark-x4-color);
+    border: 1px solid var(--bc-color-3-c);
     border-radius: 5px;
 }
 

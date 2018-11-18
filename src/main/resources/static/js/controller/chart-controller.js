@@ -54,7 +54,7 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
                 display: true,
                 position: 'right',
                 labels: {
-                    fontColor: getColor('--bc-bright-color')
+                    fontColor: getColor('--bc-color-4-a')
                 }
             },
             plugins: {
@@ -62,7 +62,7 @@ angular.module('ngBudgetCalc').controller('ChartController', function ($scope, C
                     backgroundColor: function (context) {
                         return context.dataset.backgroundColor;
                     },
-                    color: getColor('--bc-bright-color'),
+                    color: getColor('--bc-color-4-a'),
                     formatter: function (value) {
                         return value + ' zł';
                     }

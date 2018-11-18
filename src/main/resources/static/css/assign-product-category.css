@@ -1,8 +1,8 @@
 #assign-product-category div.category-container {
-    border: 2px dashed var(--bc-dark-x4-color);
+    border: 2px dashed var(--bc-color-3-c);
     min-height: 458px;
     border-radius: 5px;
-    background: var(--bc-dark-x2-color) none;
+    background: var(--bc-color-3-b) none;
 
     margin-bottom: 10px;
     margin-top: 10px;
@@ -12,10 +12,16 @@
     min-height: 458px;
 }
 
+#assign-product-category select {
+    color: var(--bc-color-4-a);
+    background-color: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
+}
+
 div.product-to-assign-category {
-    background: var(--bc-bright-color);
-    border: 1px solid var(--bc-dark-x4-color);
-    color: var(--bc-dark-x4-color);
+    background: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
+    color: var(--bc-color-4-a);
     padding: 10px 10px;
     border-radius: 5px;
     text-align: left;
@@ -28,20 +34,23 @@ div.product-to-assign-category {
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
 }
 
 div.product-to-assign-category:hover {
-    color: var(--bc-dark-x1-color);
+    opacity: 0.8;
     cursor: move;
 }
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
 }

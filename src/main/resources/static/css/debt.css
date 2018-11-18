@@ -1,10 +1,31 @@
+.panel {
+    background-color: var(--bc-color-3-a);
+}
+
+.panel-default {
+    border-color: var(--bc-color-3-c);
+}
+
+.panel-default .panel-heading {
+    color: var(--bc-color-4-a);
+    background-color: var(--bc-color-3-a);
+}
+
+.panel-group .panel + .panel {
+    margin-top: 10px;
+}
+
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-top: 1px solid var(--bc-color-3-b);
+}
+
 .debt-list {
     margin-bottom: 0;
 }
 
 .debt-list li {
     margin-top: 10px;
-    color: var(--bc-dark-x2-color);
+    color: var(--bc-color-4-a);
 }
 
 .debt-list li:first-child {
@@ -25,7 +46,7 @@
 
 .panel-title a:hover {
     text-decoration: none;
-    color: var(--bc-dark-x1-color);
+    opacity: 0.8;
 }
 
 .panel-title a:active {

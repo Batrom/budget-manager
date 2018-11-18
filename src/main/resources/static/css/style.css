@@ -1,32 +1,42 @@
 :root {
-    --bc-dark-x1-color: #727272;
-    --bc-dark-x2-color: #515151;
-    --bc-dark-x3-color: #222222;
-    --bc-dark-x4-color: #101010;
-    --bc-bright-color: #f5f5f5;
+    --bc-color-1-a: #AB987A;
+    --bc-color-1-b: #675232;
+
+    --bc-color-2-a: #FF533D;
+    --bc-color-2-b: #F2250A;
+    --bc-color-2-c: #B71904;
+
+    --bc-color-3-a: #f5f5f5;
+    --bc-color-3-b: #C6C6C6;
+    --bc-color-3-c: #9A9898;
+
+    --bc-color-4-a: #0a0a0a;
+
+    --bc-color-5-a: #FFBB3D;
+    --bc-color-5-b: #F2A10A;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    background: var(--bc-dark-x1-color);
-    color: var(--bc-bright-color);
+    background: var(--bc-color-3-a);
+    color: var(--bc-color-4-a);
 }
 
 body::-webkit-scrollbar-track {
-    border: 1px solid var(--bc-dark-x4-color);
+    border: 1px solid var(--bc-color-3-c);
     border-radius: 5px;
-    background-color: var(--bc-dark-x1-color);
+    background-color: var(--bc-color-3-a);
 }
 
 body::-webkit-scrollbar {
     width: 16px;
-    background-color: var(--bc-dark-x1-color);
+    background-color: var(--bc-color-3-a);
 }
 
 body::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px var(--bc-dark-x4-color);
-    background-color: var(--bc-dark-x1-color);
+    -webkit-box-shadow: inset 0 0 6px var(--bc-color-3-a);
+    background-color: var(--bc-color-3-b);
 }
 
 @media screen and (min-width: 768px) {

@@ -6,8 +6,8 @@
 
     font-size: 14px;
     text-align: center;
-    border: 1px solid var(--bc-dark-x4-color);
-    background: var(--bc-dark-x2-color);
+    border: 1px solid var(--bc-color-3-c);
+    background: var(--bc-color-3-b);
     border-radius: 12px;
     margin: auto;
     width: 100%;
@@ -23,15 +23,22 @@
     line-height: 50px;
 }
 
-.btn-login {
+.btn-login-container {
     margin-top: 30px;
 }
 
-div.btn-login button.btn.btn-primary {
+button#btn-login {
     width: 100%;
     height: 50px;
     padding: 0;
     font-size: 16px;
+    background-color: var(--bc-color-2-a);
+    color: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
+}
+
+button#btn-login:focus, button#btn-login:hover {
+    background-color: var(--bc-color-2-b);
 }
 
 .form-control-login {
@@ -42,6 +49,19 @@ div.btn-login button.btn.btn-primary {
 .form-control-password {
     top: 99px;
     right: 35px;
+}
+
+.login-wrapper input {
+    background-color: var(--bc-color-3-a);
+    color: var(--bc-color-4-a);
+    border: 1px solid var(--bc-color-3-c);
+}
+
+.login-wrapper input:-webkit-autofill,
+.login-wrapper input:-webkit-autofill:hover,
+.login-wrapper input:-webkit-autofill:focus,
+.login-wrapper input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--bc-color-3-a) inset;
 }
 
 @media (min-width: 576px) {

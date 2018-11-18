@@ -1,8 +1,8 @@
 .jumbotron {
     padding: 5px;
     text-align: center;
-    background: var(--bc-dark-x2-color);
-    border: 1px solid var(--bc-dark-x4-color);
+    background: var(--bc-color-3-b);
+    border: 1px solid var(--bc-color-3-c);
 }
 
 .jumbotron .btn {
@@ -13,11 +13,27 @@
 
 .jumbotron h2 {
     margin-bottom: 30px;
-    color: var(--bc-bright-color);
+    color: var(--bc-color-4-a);
 }
 
 .jumbotron label {
-    color: var(--bc-bright-color);
+    color: var(--bc-color-4-a);
+}
+
+.jumbotron input, .jumbotron select.form-control {
+    color: var(--bc-color-4-a);
+    background-color: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
+}
+
+#add-product {
+    color: var(--bc-color-4-a);
+    background-color: var(--bc-color-3-a);
+    border-color: var(--bc-color-3-c);
+}
+
+#add-product:hover {
+    opacity: 0.8;
 }
 
 #todays-member-products {
@@ -25,16 +41,16 @@
 }
 
 #todays-member-products > div > .well {
-    color: var(--bc-bright-color);
-    background: var(--bc-dark-x2-color);
-    border: 1px solid var(--bc-dark-x4-color);
+    color: var(--bc-color-4-a);
+    background: var(--bc-color-3-b);
+    border: 1px solid var(--bc-color-3-c);
 }
 
 .well-product {
     margin-bottom: 0;
     padding: 5px 5px;
-    background: var(--bc-dark-x2-color);
-    border: 1px solid var(--bc-dark-x4-color);
+    background: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
 }
 
 .well-container-narrow {
@@ -50,6 +66,21 @@
 .btn-edit-product {
     width: 100%;
     height: 100%;
+    color: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
+    background-color: var(--bc-color-5-a);
+}
+.btn-edit-product:focus, .btn-edit-product:hover {
+    color: var(--bc-color-3-a);
+    background-color: var(--bc-color-5-b);
+}
+
+.btn-delete-product {
+    background-color: var(--bc-color-2-b);
+}
+
+.btn-delete-product:focus, .btn-delete-product:hover {
+    background-color: var(--bc-color-2-c);
 }
 
 .btn-edit-product-list {
@@ -59,17 +90,18 @@
 }
 
 .modal-content {
-    color: var(--bc-bright-color);
-    border: 1px solid var(--bc-dark-x4-color);
-    background: var(--bc-dark-x1-color);
+    color: var(--bc-color-4-a);
+    background: var(--bc-color-3-b);
 }
 
 .modal-header {
-    border-bottom: 1px solid var(--bc-dark-x4-color);
+    background: var(--bc-color-3-c);
+    border-bottom: 1px solid var(--bc-color-3-a);
 }
 
 .modal-footer {
-    border-top: 1px solid var(--bc-dark-x4-color);
+    background: var(--bc-color-3-c);
+    border-top: 1px solid var(--bc-color-3-a);
 }
 
 .table > tbody > tr > td {
@@ -78,7 +110,7 @@
 
 .table {
     text-align: center;
-    color: var(--bc-bright-color);
+    color: var(--bc-color-4-a);
 }
 
 .table th {
@@ -86,9 +118,9 @@
 }
 
 .table td {
-    border-top: 1px solid var(--bc-bright-color);
+    border-top: 1px solid var(--bc-color-3-c);
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: var(--bc-dark-x2-color);
+    background-color: var(--bc-color-3-b);
 }

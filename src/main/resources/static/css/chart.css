@@ -1,12 +1,16 @@
 select.chart-select {
     overflow: hidden;
     overflow-y: auto;
+
+    color: var(--bc-color-4-a);
+    background-color: var(--bc-color-3-a);
+    border: 1px solid var(--bc-color-3-c);
 }
 
 select.chart-select::-webkit-scrollbar-track {
-    border: 1px solid var(--bc-dark-x4-color);
+    border: 1px solid var(--bc-color-2-c);
     border-radius: 5px;
-    background-color: var(--bc-bright-color);
+    background-color: var(--bc-color-3-a);
 }
 
 select.chart-select::-webkit-scrollbar {
@@ -16,8 +20,8 @@ select.chart-select::-webkit-scrollbar {
 
 select.chart-select::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px var(--bc-dark-x4-color);
-    background-color: var(--bc-dark-x1-color);
+    -webkit-box-shadow: inset 0 0 6px var(--bc-color-2-c);
+    background-color: var(--bc-color-1-a);
 }
 
 .chart-container {

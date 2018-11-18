@@ -1,18 +1,36 @@
 .navbar-inverse {
-    background-color: var(--bc-dark-x3-color);
-    border-color: var(--bc-dark-x4-color);
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: var(--bc-dark-x4-color);
+.navbar .navbar-collapse, .navbar .navbar-form {
+    border-color: var(--bc-color-2-c);
 }
 
 .navbar {
     border-radius: 0;
+    background-color: var(--bc-color-2-a);
+    border-color: var(--bc-color-2-c);
 }
 
 .btn-logout {
     margin-right: 15px;
-    border-left: 1px solid var(--bc-dark-x4-color);
-    border-right: 1px solid var(--bc-dark-x4-color);
+    background-color: var(--bc-color-2-b);
+    border-left: 1px solid var(--bc-color-2-c);
+    border-right: 1px solid var(--bc-color-2-c);
+}
+
+.navbar a {
+    color: var(--bc-color-3-a)
+}
+
+.navbar li.active {
+    background-color: var(--bc-color-2-b);
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+    opacity: 0.8;
+}
+
+.navbar-header {
+    color: var(--bc-color-3-a);
 }
